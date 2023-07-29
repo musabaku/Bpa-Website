@@ -15,12 +15,10 @@
   font-weight: 600;
 }
 
-.blogContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
+
+
+
+
 
 .blogContent {
   width: 250px;
@@ -29,6 +27,7 @@
   border-radius: 5px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+  /* margin: 20vmax; */
 }
 
 .blogImage {

@@ -4,7 +4,10 @@
   padding: 0;
   /* border: 1px solid black; */
 }
-Copy
+body {
+  /* Hide both horizontal and vertical scrollbars */
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
 }

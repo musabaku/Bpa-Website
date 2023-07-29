@@ -12,22 +12,22 @@ import PropertyCard from "./PropertyCard.jsx";
 import Loader from "../../Loader/Loader";
 import turkish from "../../../images/turkciti.JPG";
 
-const data = [
+const datas = [
   {
-    image: "https://i.ibb.co/5nrpTm0/big1.jpg",
+    image: "https://i.ibb.co/wd1rBdL/1.jpg",
     title: "Top Cities for Profitable Real Estate Investment in Turkey",
   },
   {
-    image: "https://i.ibb.co/XxXMLs3/big2.jpg",
+    image: "https://i.ibb.co/3CCGXJj/2.jpg",
     title: "Exploring Turkey’s Booming Real Estate Market",
   },
   {
-    image: "https://i.ibb.co/N2hv2QN/big3.jpg",
+    image: "https://i.ibb.co/wQLbL92/3.jpg",
     title:
       "Impact of Changing Mortgage Interest Rates on Turkey’s Property Market",
   },
   {
-    image: "https://i.ibb.co/YtwyWkM/big4.jpg",
+    image: "https://i.ibb.co/wd1rBdL/1.jpg",
     title: "Notaries Take the Lead: A New Era in Real Estate Transactions",
   },
 
@@ -75,9 +75,14 @@ const Home = () => {
           <TCshort />
 
           <AboutShort />
-          
+
           <CountStats />
-          <BlogCard data={data} />
+          <div className="blog-container">
+
+          {datas &&
+            datas.map((data) => <BlogCard data={data} key={data._id} />)}
+          </div>
+
         </Fragment>
       )}
     </Fragment>

@@ -7,17 +7,14 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const BlogCard = ({ data }) => {
 
-  
-  
-
   const settings = {
     dots: true,
-    infinite: true,
-    speed: 500,
+    // infinite: true,
+    speed: 5000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true, 
-    autoplaySpeed: 1000, 
+    // autoplay: true, 
+    autoplaySpeed: 10000, 
   };
   
 
@@ -27,13 +24,10 @@ const BlogCard = ({ data }) => {
         <h3>Latest Posts on Our Blog</h3>
       </div>
      <Slider {...settings}>
-
-      {data.map((blog, index) => (
-              <div className="blogContent" key={index}>
-                <img src={blog.image} alt={blog.title} className="blogImage" />
-                <h4>{blog.title}</h4>
+              <div className="blogContent" key={data.title}>
+                <img src={data.image} alt={data.title} className="blogImage" />
+                <h4>{data.title}</h4>
               </div>
-            ))}
     </Slider>
       <div className="blogButton">
         <button>
