@@ -91,6 +91,7 @@ const departmentsData = [
                 Having successfully helped close to 1900 people realize their
                 dream of homeownership, our track record speaks for itself.
               </p>
+              <h1>Thanks for Visiting Us</h1>
             </div>
           </div>
 
