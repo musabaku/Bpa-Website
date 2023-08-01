@@ -1,18 +1,18 @@
 import { createReducer } from "@reduxjs/toolkit";
 
 
-export const blogReducer = createReducer({blog:[]},{
+export const blogReducer = createReducer({blogs:[]},{
     blogRequest : (state)=>{
-        loading=true
+        state.loading=true
     },
     blogSuccess : (state,action)=>{
-        loading=false;
-        state.blog= action.payload ;
+        state.loading=false;
+        state.blogs= action.payload.blogs ;
     },
     blogFail : (state,action)=>{
-        loading=false;
+        state.loading=false;
         state.error = action.payload;
-        state.blog = null;
+        state.blogs = null;
 
     },
     clearErrors : (state)=>{

@@ -48,12 +48,28 @@ exports.deleteBlog = catchAsyncErrors(async(req,res,next)=>{
   })
 })
 
-exports.createBlog = catchAsyncErrors(async(req,res,next)=>{
-  req.body.user = req.user.id;
-  const blogs = await Blog.create(req.body)
+// exports.createBlog = catchAsyncErrors(async(req,res,next)=>{
+//   req.body.user = req.user.id;
+//   const blogs = await Blog.create(req.body)
 
-  res.status(200).json({
-    success:true,
-    blogs
-  })
-})
+//   res.status(200).json({
+//     success:true,
+//     blogs
+//   })
+// })
+
+exports.createBlog = async (req, res, next) => {
+  try {
+    const blogs = await Blog.create(req.body)
+
+    res.status(201).json({
+      success: true,
+      blogs,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};

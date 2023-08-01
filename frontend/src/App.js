@@ -5,6 +5,7 @@ import Home from "./component/Layout/Home/Home";
 import Footer from "./component/Layout/Footer/Footer"
 import TC from "./component/Layout/TC/TC"
 import Contact from "./component/Layout/Contact/Contact"
+import Blog from "./component/Blog/Blog";
 
 
 import BuyProperty from "./component/Layout/Services/BuyProperty"
@@ -17,7 +18,7 @@ import PrimeProperties from "./component/Layout/Services/PrimeProperties"
 import Services from "./component/Layout/Services/Services"
 import About from "./component/About/About"
 import Property from "./component/Property/Property"
-import PropertyDetails from "./component/Property/PropertyDetails"
+// import PropertyDetails from "./component/Property/PropertyDetails"
 
 
 
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
 
 
 
@@ -44,7 +46,7 @@ export default function App() {
 
 
         <Route path="/properties" element={<Property />} />
-        <Route path="/property/:id" element={<PropertyDetails />} />
+        {/* <Route path="/property/:id" element={<PropertyDetails />} /> */}
 
 
         </Routes>

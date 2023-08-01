@@ -6,14 +6,14 @@ title:{
   required:true
 },
 image:{
-  url:{
+ 
     type:String,
     required:true
-  }
+  
 },
 description:{
-  type:String,
-  required:true
+  type:String
+  // required:true
 },
 })
 

@@ -9,7 +9,6 @@ import { FaMoneyCheckDollar } from 'react-icons/fa6';
 import {Link} from "react-router-dom"
 
 const PropertyDetails = ({ property }) => {
-  console.log(property)
   return (
     <Fragment>
             <Link to={`/property/${property._id}`}>
