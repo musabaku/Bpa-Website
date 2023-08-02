@@ -1,0 +1,8 @@
+.blogmain-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+}

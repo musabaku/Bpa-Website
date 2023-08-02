@@ -1,0 +1,182 @@
+.propertyMain-details-container {
+ 
+    padding: 20px;
+    background-color: #D9DFFF;
+  }
+  
+  .propertyMain-image-container img {
+    max-width: 100%;
+    max-height: 400px; /* Set your desired maximum height here */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  }
+
+  .propertyMain-description {
+    padding: 2vmax;
+    background-color: #410954;
+ 
+
+
+    /* margin-bottom: 20px; */
+    /* background-color: rgb(123, 163, 238); */
+
+  }
+
+ 
+  
+
+  .propertyMain-save-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .propertyMain-save-button:hover {
+    background-color: #0056b3;
+  }
+  .propertyMain-description-text {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #61fb82;
+
+  }
+  .propertyMain-description-text h2 {
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #fbda61;
+
+  }
+  .propertyMain-description-text h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fbda61;
+
+  }
+  .propertyMain-description-text h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fbda61;
+
+  }
+  
+  
+  .propertyMain-image-features-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .propertyMain-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+ 
+  .featuree{
+    position: absolute;
+    top: 10vmax;
+    right: 1.5vmax;
+    width: 250px;
+    max-height: 280px; /* Set your desired maximum height here */
+    height: auto;
+    border-radius: 10px;
+  animation: upDownAnimation 1s ease-in-out infinite alternate;
+
+  }
+
+  
+@keyframes upDownAnimation {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
+
+  .propertyMain-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50%;
+    background-color: #fbda61;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* margin-right: 20px; */
+  }
+  
+  .propertyMain-features h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #410954;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .propertyMain-features div {
+    margin-bottom: 10px;
+  }
+  
+  .propertyMain-features p {
+    margin: 0;
+    font-size: 18px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .propertyMain-features span {
+    font-size: 18px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .propertyMain-features svg {
+    font-size: 18px;
+    /* margin-bottom: 5px; */
+    color: rgb(3, 101, 3);
+
+  }
+  
+  .propertyMain-features-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .propertyMain-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .propertyMain-feature span {
+    font-size: 16px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(3, 101, 3);
+
+  }
+  
+  .propertyMain-feature span:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .propertyMain-feature svg {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  

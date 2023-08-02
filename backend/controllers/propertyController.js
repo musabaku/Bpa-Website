@@ -27,7 +27,7 @@ exports.createProperty = async (req, res, next) => {
 
 exports.getPropertyDetails = catchAsyncErrors(async (req, res, next) => {
  
-  const property = await Property.findById(req.params.id,);
+  const property = await Property.findById(req.params.id);
   res.status(200).json({
     success: true,
     property,

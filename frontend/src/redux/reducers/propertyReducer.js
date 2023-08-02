@@ -9,7 +9,6 @@ export const propertyReducer = createReducer(
     propertySuccess: (state, action) => {
       state.loading = false;
       state.properties = action.payload.property;
-      // state.propertyCount = action.payload.propertyCount;
     },
     propertyFail: (state, action) => {
       state.loading = false;
@@ -23,19 +22,18 @@ export const propertyReducer = createReducer(
 );
 
 export const propertyDetailsReducer = createReducer(
-  {property:[]},
+  {propertyDetails:{},loading:true},
   {
     propertyDetailsRequest: (state) => {
       state.loading = true;
     },
     propertyDetailsSuccess: (state, action) => {
       state.loading = false;
-      state.property = action.payload;
-      // state.propertyCount = action.payload.propertyCount;
+      state.propertyDetails = action.payload;
     },
     propertyDetailsFail: (state, action) => {
       state.loading = false;
-      state.property = null;
+      state.propertyDetails = null;
       state.error = action.payload;
     },
     clearErrors: (state) => {
@@ -43,3 +41,22 @@ export const propertyDetailsReducer = createReducer(
     },
   }
 );
+
+export const updatePropertyDescriptionReducer = createReducer({property:{}},{
+  updatePropertyDescriptionRequest: (state) => {
+    state.loading = true;
+  },
+  updatePropertyDescriptionSuccess: (state, action) => {
+    state.loading = false;
+    state.property = action.payload;
+  },
+  updatePropertyDescriptionFail: (state, action) => {
+    state.loading = false;
+    state.property = null;
+    state.error = action.payload;
+  },
+  clearErrors: (state) => {
+    state.error = null; 
+  },
+})
+

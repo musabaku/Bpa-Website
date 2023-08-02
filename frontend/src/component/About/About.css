@@ -52,7 +52,8 @@
     margin: 0 10px;
     transform: rotate(45deg);
     width: 8px;
-    background-color: red;
+    background-color: blue;
+
 }
 
 .middler-line {
@@ -60,7 +61,7 @@
     height: 4px;
     position: relative;
     width: 400px;
-    background-color: red;
+    background-color: blue;
 
 }
 

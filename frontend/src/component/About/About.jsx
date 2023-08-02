@@ -38,9 +38,9 @@ const departmentsData = [
   return (
     <>
       <div className="aboutmain-container">
-        <div className="about-intro">
+        {/* <div className="about-intro">
           <img src={Aboutpic} alt="About" className="about-image" />
-        </div>
+        </div> */}
 
         <div className="abouth2">
           <h2>Big Property Agency</h2>
@@ -91,7 +91,6 @@ const departmentsData = [
                 Having successfully helped close to 1900 people realize their
                 dream of homeownership, our track record speaks for itself.
               </p>
-              <h1>Thanks for Visiting Us</h1>
             </div>
           </div>
 

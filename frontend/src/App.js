@@ -18,7 +18,7 @@ import PrimeProperties from "./component/Layout/Services/PrimeProperties"
 import Services from "./component/Layout/Services/Services"
 import About from "./component/About/About"
 import Property from "./component/Property/Property"
-// import PropertyDetails from "./component/Property/PropertyDetails"
+import PropertyDetails from "./component/Property/PropertyDetails"
 
 
 
@@ -46,7 +46,7 @@ export default function App() {
 
 
         <Route path="/properties" element={<Property />} />
-        {/* <Route path="/property/:id" element={<PropertyDetails />} /> */}
+        <Route path="/property/:id" element={<PropertyDetails />} />
 
 
         </Routes>
