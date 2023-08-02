@@ -1,7 +1,7 @@
 /* BlogPage.css */
 
 .blog-mainpage {
-    background-color: #f9f9f9;
+    background-color: #fbcd61;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
@@ -38,3 +38,15 @@
     text-decoration: underline;
   }
   
+  .blog-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color:#61fba4;
+    color: #410954;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-top: 2vmax;
+
+  }
