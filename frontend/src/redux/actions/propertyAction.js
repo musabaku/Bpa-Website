@@ -2,17 +2,21 @@
 
 
 import axios from "axios";
-export const getProperty = () => async (dispatch) => {
+export const getProperty = (keyword="",location,price=[0,900000]) => async (dispatch) => {
   try {
     dispatch({ type: "propertyRequest" });
-    const { data } = await axios.get("/api/v1/property");
+    // const { data } = await axios.get("/property");
+    let link = `/api/v1/property?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}`
+    if(location){
+      link = `/api/v1/property?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`
+    }
+    const { data } = await axios.get(link);
   
     dispatch({ type: "propertySuccess", payload: data });
   } catch (error) {
     dispatch({ type: "propertyFail", payload: error.response.data.message });
   }
 };
-
 
 export const getPropertyDetails = (id) => async (dispatch) => {
   try {

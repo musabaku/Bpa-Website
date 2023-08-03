@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
   background-color: #E6E6E6;
+  
+  padding-top: 6vmax;
 
   color: black;
 }
@@ -33,8 +34,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(238,174,202);
-  background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
    color: blue;
    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.575);
 

@@ -1,29 +1,47 @@
-import React,{Fragment} from 'react'
-import "./CountStats.css"
+import React, { Fragment } from 'react';
+import { FaHome, FaUsers, FaProjectDiagram, FaMoneyBillWave } from 'react-icons/fa';
+import "./CountStats.css";
 
 const CountStats = () => {
-  return (<Fragment>
-    <div className="container-stats">
-      <div className="stats">
-      <p className="stats-number">1900+</p>
-      <p className="stats-text">UNITS</p>
-      </div>
-      <div className="stats">
-      <p className="stats-number">27000+</p>
-      <p className="stats-text">INTERVIEWS</p>
-      </div>
-      <div className="stats">
-      <p className="stats-number margin-r">290+</p>
-      <p className="stats-text">PROJECTS</p>
-      </div>
-      <div className="stats">
-      <p className="stats-number margin-r">950+</p>
-      <p className="stats-text">MILLION TURNOVER</p>
-      </div>
-      
-    </div>
-    </Fragment>
-  )
-}
+  const statsData = [
+    {
+      icon: FaHome,
+      number: "1900+",
+      title: "UNITS"
+    },
+    {
+      icon: FaUsers,
+      number: "27000+",
+      title: "INTERVIEWS"
+    },
+    {
+      icon: FaProjectDiagram,
+      number: "290+",
+      title: "PROJECTS"
+    },
+    {
+      icon: FaMoneyBillWave,
+      number: "950+",
+      title: "MILLION TURNOVER"
+    }
+  ];
 
-export default CountStats
+  return (
+    <Fragment>
+      <div className="countStats-box">
+        <h2>Numbers say it all</h2>
+        <div className="stats-container">
+          {statsData.map((stat, index) => (
+            <div className="stats-card" key={index}>
+              <div className="stats-icon">{<stat.icon />}</div>
+              <p className="stats-number">{stat.number}</p>
+              <p className="stats-text">{stat.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+export default CountStats;

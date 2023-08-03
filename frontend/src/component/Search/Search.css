@@ -1,0 +1,111 @@
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.search-form input,
+.search-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 1vmax;
+
+}
+
+.search-form .dropdown {
+  position: relative;
+}
+
+.search-form .dropdown h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.search-form .dropdown select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 0 1vmax;
+
+}
+
+.search-form .dropdown::after {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+
+
+.searchButton-prop {
+  display: inline-block;
+  padding: 10px 24px;
+  /* background-color:#61fba4; */
+  
+  color: #fbda61;
+  background-color:#410954;
+
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin: 0 1vmax;
+}
+.resetButton-prop {
+  display: inline-block;
+  padding: 10px 24px;
+  /* background-color:#61fba4; */
+  background-color:#fbda61;
+  color: #410954;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+.search-form button:hover {
+  background-color: #007bff; 
+}
+
+.search-form button:focus {
+  outline: none;
+}
+
+.search-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Styling the select dropdown */
+.dropdown select {
+  /* Your styles for the overall select element */
+  width: 200px; /* Example: set the width as needed */
+  padding: 8px; /* Example: adjust padding as needed */
+  border: 1px solid #ccc; /* Example: customize the border */
+  border-radius: 4px; /* Example: add border-radius if desired */
+}
+
+/* Styling the options */
+.dropdown select option {
+  /* Your styles for the options */
+  background-color: #f2f2f2; /* Example: set the background color */
+  color: #333; /* Example: set the text color */
+  padding: 8px; /* Example: adjust padding as needed */
+}
+
+/* Styling the selected option */
+.dropdown select option:checked {
+  /* Your styles for the selected option */
+  background-color: #007bff; /* Example: set a different background color */
+  color: #fff; /* Example: set a different text color */
+}

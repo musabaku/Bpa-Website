@@ -5,6 +5,7 @@ const {
   getPropertyDetails,
   updateProperty,
   deleteProperty,
+  searchProperty
 } = require('../controllers/propertyController.js');
 const  isAuthenticated  = require('../middlewares/auth');
 

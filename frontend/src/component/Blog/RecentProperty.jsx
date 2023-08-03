@@ -19,7 +19,7 @@ const PropertyDetails = ({ property }) => {
                 <FaMoneyCheckDollar /> ${property.price}
               </span>
               <p>
-                <FaLocationDot /> {property.location}
+                <FaLocationDot /> {property.location}, Istanbul
               </p>
             </div>
           </div>

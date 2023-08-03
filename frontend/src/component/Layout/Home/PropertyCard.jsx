@@ -20,7 +20,7 @@ const PropertyDetails = ({ property }) => {
               <div className="property-details">
                 <h3>{property.name}</h3>
                 <span><FaMoneyCheckDollar/>  ${property.price}</span>
-                <p><FaLocationDot/>  {property.location}</p>
+                <p><FaLocationDot/>  {property.location}, Istanbul</p>
                 </div>
 
                 <div className="property-features">

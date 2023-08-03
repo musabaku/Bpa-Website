@@ -16,7 +16,6 @@ const Blog = () => {
 
 
   const { blogs } = useSelector((state) => state.blogs);
-  console.log(blogs);
 
   return (
     <>

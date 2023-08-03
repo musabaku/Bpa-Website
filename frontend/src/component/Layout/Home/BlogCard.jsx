@@ -1,52 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./BlogCard.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getBlog } from "../../../redux/actions/blogAction";
+import BlogPage from "../../Blog/BlogPage";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const BlogCard = () => {
-  const datas = [
-    {
-      image: "https://i.ibb.co/wd1rBdL/1.jpg",
-      title: "Top Cities for Profitable Real Estate Investment in Turkey",
-    },
-    {
-      image: "https://i.ibb.co/3CCGXJj/2.jpg",
-      title: "Exploring Turkey’s Booming Real Estate Market",
-    },
-    {
-      image: "https://i.ibb.co/wQLbL92/3.jpg",
-      title:
-        "Impact of Changing Mortgage Interest Rates on Turkey’s Property Market",
-    },
-    {
-      image: "https://i.ibb.co/wd1rBdL/1.jpg",
-      title: "Notaries Take the Lead: A New Era in Real Estate Transactions",
-    },
-    // Add more data objects as needed
-  ];
+  const dispatch = useDispatch();
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 800,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  };
+  useEffect(() => {
+    dispatch(getBlog());
+  }, [dispatch]);
 
+  const { blogs } = useSelector((state) => state.blogs);
   return (
     <>
-      <div className="blogCard">
-        <Slider {...settings}>
-          {datas.map((data, index) => (
-            <div className="blogContent" key={index}>
-              <img src={data.image} alt={data.title} className="blogImage" />
-              <h4>{data.title}</h4>
-            </div>
-          ))}
-        </Slider>
+      <div className="bloghome-box">
+        <div className="bloghome-container">
+          <h2 className="bloghome-box-h2">Latest Posts on Our Blog</h2>
+          {blogs &&
+            blogs.map((blog) => <BlogPage blog={blog} key={blog._id} />)}
+        </div>
+        <div className="blogButton">
+            <button>
+              View All <RiArrowRightSLine />
+            </button>
+          </div>
       </div>
     </>
   );

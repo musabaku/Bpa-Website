@@ -1,42 +1,55 @@
-.container-stats{
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2.5vmax;
-  position: relative;
-}
-
-.stats-number{
-  font: 300 4vmax "Roboto";
-  color: rgba(0, 0, 0, 0.747);
-}
-
-.stats-text{
-  font: 300 1vmax "Roboto";
+.countStats-box {
+  background: linear-gradient(135deg, #410954, #0099ff);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
   text-align: center;
-  color: rgb(81, 46, 145);
-margin-top: 1vmax;
-
-}
-.margin-r{
-  margin-left: 2vmax;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.container-stats::before,
-.container-stats::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 40px; /* Adjust the size of the shape as needed */
-  background-color: rgba(255, 0, 0, 0.815); /* Change the color as desired */
+.countStats-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-.container-stats::before {
-  left: 0;
-  background: linear-gradient(to bottom, #ff0000, #ff8888); /* Red gradient */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
 }
 
-.container-stats::after {
-  right: 0;
-  background: linear-gradient(to bottom, #0000ff, #8888ff); /* Blue gradient */
+.stats-card {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.stats-card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.stats-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #fbda61;
+}
+
+.stats-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.stats-card p {
+  font-size: 1rem;
+  color: #fff;
 }
