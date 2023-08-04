@@ -1,0 +1,53 @@
+/* CreateProperty.css */
+
+.dashboard {
+    display: flex;
+    /* Add any other styles for the dashboard container */
+
+  }
+  
+  .create-property-container {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    align-items: center;
+    /* Add any other styles for the create-property container */
+  }
+  
+  .create-property-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    /* Add any other styles for the h2 element */
+  }
+  
+  /* .create-property-container form {
+  } */
+  
+  .create-property-container .form-group {
+    margin-bottom: 15px;
+    /* Add any other styles for the form-group */
+  }
+  
+  .create-property-container label {
+    display: block;
+    margin-bottom: 5px;
+    /* Add any other styles for the labels */
+  }
+  
+  .create-property-container input,
+  .create-property-container .ql-editor {
+    width: 100%;
+    padding: 8px;
+    /* Add any other styles for the input elements and editor */
+  }
+  
+  .create-property-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    /* Add any other styles for the button */
+  }
+  

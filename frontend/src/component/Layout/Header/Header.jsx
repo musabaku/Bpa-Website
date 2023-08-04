@@ -8,14 +8,26 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const {isAuthenticated} = useSelector((state) => state.user);
+
   return (
     <div>
       <div className="top-header">
         <div className="box1">
           <p><MdEmail /> info@bigpropertyagency.com</p>
           <p><FaWhatsapp />  +90 532 255 23 65</p>
+          <Link to="/login">
+          <button className="admin-log">Admin-Login</button>
+
+          </Link>
+          {isAuthenticated && (
+        <Link to="/admin/dashboard">
+          <button className="admin-db">Admin-Dashboard</button>
+        </Link>
+      )}
         </div>
 
         <div className="box2">

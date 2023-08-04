@@ -1,0 +1,65 @@
+/* Sidebar.css */
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-item {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-icon {
+  margin-right: 0.5rem;
+}
+
+.sidebar-item:hover {
+  color: tomato;
+}
+
+.treeview {
+  margin-top: 2rem;
+}
+
+.treeview p {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 0.5rem;
+}
+
+.treeview ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.treeview-item {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.treeview-icon {
+  margin-right: 0.5rem;
+}
+
+.treeview-item:hover {
+  color: tomato;
+}
+
+/* Additional styling for nested treeview */
+.treeview ul li {
+  margin-bottom: 0.5rem;
+}

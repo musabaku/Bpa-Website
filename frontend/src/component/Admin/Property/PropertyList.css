@@ -1,0 +1,59 @@
+.propertyListContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  #propertyListHeading {
+    font: 400 2rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 0.5s;
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .propertyListTable {
+    background-color: white;
+    border: none !important;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .propertyListTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .propertyListTable th,
+  .propertyListTable td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  
+  .propertyListTable a,
+  .propertyListTable button {
+    color: rgba(0, 0, 0, 0.527);
+    transition: all 0.5s;
+  }
+  
+  .propertyListTable a:hover {
+    color: tomato;
+  }
+  
+  .propertyListTable button:hover {
+    color: rgb(236, 30, 30);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .propertyListTable th,
+    .propertyListTable td {
+      font-size: 4vw;
+    }
+  }

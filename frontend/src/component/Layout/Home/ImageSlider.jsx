@@ -1,36 +1,51 @@
 import React from 'react';
-import Slider from 'react-slick';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper/core';
+
+import 'swiper/swiper.min.css';
+import 'swiper/components/navigation/navigation.min.css';
+import 'swiper/components/pagination/pagination.min.css';
+import 'swiper/components/scrollbar/scrollbar.min.css';
+
 import slid1 from "../../../images/Slider/slid1.JPG";
 import slid2 from "../../../images/Slider/slid2.JPG";
 import slid3 from "../../../images/Slider/slid3.JPG";
-import './ImageSlider.css'; // Import your CSS file
+
+// Install Swiper modules
+SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
 const ImageSlider = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
+  const images = [slid1, slid2, slid3];
+
+  const swiperStyle = {
+    width: '100%',
+    height: '400px', // Set the desired height of the slider
+    borderRadius: '10px',
+    overflow: 'hidden',
   };
 
-  const images = [
-    slid1,
-    slid2,
-    slid3,
-  ];
+  const slideImageStyle = {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+  };
 
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
+    <div style={swiperStyle}>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        autoplay={{ delay: 1500, disableOnInteraction: false }}
+      >
         {images.map((image, index) => (
-          <div key={index}>
-            <img src={image} alt="" />
-          </div>
+          <SwiperSlide key={index}>
+            <img src={image} alt={`Slide ${index + 1}`} style={slideImageStyle} />
+          </SwiperSlide>
         ))}
-      </Slider>
+      </Swiper>
     </div>
   );
 };

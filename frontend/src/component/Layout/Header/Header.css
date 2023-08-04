@@ -48,9 +48,25 @@ a {
   font: 300 0.7vmax "Roboto";
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 2.5vmax;
+  align-items: center;
 }
 .box1 > p {
   margin: 0 3vmax;
+}
+.admin-log, .admin-db{
+  margin: 0 3vmax;
+  padding: 7px 15px;
+/*   
+  color: #fbda61;
+  background-color:#410954; */
+  background-color: #d51730;
+  color: white;
+cursor: pointer;
+  text-decoration: none;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: 1px solid white;
 }
 .box2{
   padding: 0.5vmax;

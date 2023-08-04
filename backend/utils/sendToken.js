@@ -11,7 +11,7 @@ const options = {
 };
 
 
-res.status(statusCode).cookies("token",token,options).json({
+res.status(statusCode).cookie("token",token,options).json({
   user,
   success:true,
   token

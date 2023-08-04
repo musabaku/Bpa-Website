@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import Aboutpic from "../../images/About/About.jpg";
+// import Aboutpic from "../../images/About/About.jpg";
 import customer from "../../images/About/customer.JPG";
 import experience from "../../images/About/experience.JPG";
 import { RiPhoneLine, RiAdvertisementLine, RiDatabaseLine, RiShoppingCartLine, RiToolsLine } from 'react-icons/ri';
