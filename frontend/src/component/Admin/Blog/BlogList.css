@@ -1,0 +1,59 @@
+.blogListContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  #blogListHeading {
+    font: 400 2rem "Roboto";
+    padding: 0.5vmax;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.637);
+    transition: all 0.5s;
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .blogListTable {
+    background-color: white;
+    border: none !important;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  .blogListTable table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .blogListTable th,
+  .blogListTable td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.158);
+  }
+  
+  .blogListTable a,
+  .blogListTable button {
+    color: rgba(0, 0, 0, 0.527);
+    transition: all 0.5s;
+  }
+  
+  .blogListTable a:hover {
+    color: tomato;
+  }
+  
+  .blogListTable button:hover {
+    color: rgb(236, 30, 30);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .blogListTable th,
+    .blogListTable td {
+      font-size: 4vw;
+    }
+  }

@@ -72,12 +72,32 @@ export const newBlogReducer = createReducer(
       },
       deleteBlogSuccess: (state, action) => {
         state.loading = false;
-        state.blogs = action.payload.Blog;
         state.isDeleted= action.payload;
       },
       deleteBlogFail: (state, action) => {
         state.loading = false;
-        state.blogs = null;
+        state.error = action.payload;
+      },
+      clearErrors: (state) => {
+        state.error = null; 
+      },
+    }
+  );
+
+
+  export const blogDetailsReducer = createReducer(
+    {blogDetails:{},loading:true},
+    {
+      blogDetailsRequest: (state) => {
+        state.loading = true;
+      },
+      blogDetailsSuccess: (state, action) => {
+        state.loading = false;
+        state.blogDetails = action.payload;
+      },
+      blogDetailsFail: (state, action) => {
+        state.loading = false;
+        state.blogDetails = null;
         state.error = action.payload;
       },
       clearErrors: (state) => {

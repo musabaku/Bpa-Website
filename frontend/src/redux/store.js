@@ -1,7 +1,7 @@
 // store.js
 import { configureStore } from '@reduxjs/toolkit';
 import {propertyReducer,propertyDetailsReducer,updatePropertyDescriptionReducer} from './reducers/propertyReducer';
-import {blogReducer} from './reducers/blogReducer';
+import {blogReducer,blogDetailsReducer} from './reducers/blogReducer';
 import {userReducer} from './reducers/userReducer';
 import thunk from 'redux-thunk'
 const store = configureStore({
@@ -10,6 +10,7 @@ const store = configureStore({
     blogs: blogReducer, 
     user: userReducer, 
     propertyDetails: propertyDetailsReducer, 
+    blogDetails: blogDetailsReducer, 
     propertyDescription: updatePropertyDescriptionReducer, 
 
   },

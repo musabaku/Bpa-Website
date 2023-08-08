@@ -1,0 +1,190 @@
+.blogMain-details-container {
+ 
+    padding: 20px;
+    background-color: #D9DFFF;
+  }
+  
+  .blogMain-image-container img {
+    max-width: 100%;
+    max-height: 350px; /* Set your desired maximum height here */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  }
+
+  .blogMain-description {
+    padding: 2vmax;
+    background-color: #410954;
+ 
+
+
+    /* margin-bottom: 20px; */
+    /* background-color: rgb(123, 163, 238); */
+
+  }
+
+ 
+  
+
+  .blogMain-save-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .blogMain-save-button:hover {
+    background-color: #0056b3;
+  }
+  .blogMain-description-text {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #61fb82;
+
+  }
+  .blogMain-description-text h2 {
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #fbda61;
+
+  }
+  .blogMain-description-text img {
+margin: 1vmax 26vmax;
+/* border: 1px solid red; */
+width: 450px;
+height: 310px;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  .blogMain-description-text h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fbda61;
+
+  }
+  .blogMain-description-text h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fbda61;
+
+  }
+  
+  
+  .blogMain-image-features-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .blogMain-image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+
+ 
+  /* .featuree{
+    position: absolute;
+    top: 10vmax;
+    right: 1.5vmax;
+    width: 250px;
+    max-height: 280px;
+    height: auto;
+    border-radius: 10px;
+  animation: upDownAnimation 1s ease-in-out infinite alternate;
+
+  } */
+
+/*   
+@keyframes upDownAnimation {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  } */
+
+  .blogMain-features {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50%;
+    background-color: #fbda61;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* margin-right: 20px; */
+  }
+  
+  .blogMain-features h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #410954;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .blogMain-features div {
+    margin-bottom: 10px;
+  }
+  
+  .blogMain-features p {
+    margin: 0;
+    font-size: 18px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .blogMain-features span {
+    font-size: 18px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .blogMain-features svg {
+    font-size: 18px;
+    /* margin-bottom: 5px; */
+    color: rgb(3, 101, 3);
+
+  }
+  
+  .blogMain-features-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .blogMain-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .blogMain-feature span {
+    font-size: 16px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(3, 101, 3);
+
+  }
+  
+  .blogMain-feature span:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  
+  .blogMain-feature svg {
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #410954;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }
+  

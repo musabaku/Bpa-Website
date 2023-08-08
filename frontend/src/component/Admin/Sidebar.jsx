@@ -18,7 +18,7 @@ const Sidebar = () => {
             <li>
               <Link to="/admin/allproperty" className="treeview-item">
                 <RiEditLine className="treeview-icon" />
-                Edit Property
+                All Property
               </Link>
             </li>
             <li>
@@ -36,7 +36,7 @@ const Sidebar = () => {
             <li>
               <Link to="/admin/allblog" className="treeview-item">
                 <RiEditLine className="treeview-icon" />
-                Edit Blogs
+                All Blogs
               </Link>
             </li>
             <li>

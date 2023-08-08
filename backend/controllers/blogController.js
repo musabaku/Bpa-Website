@@ -11,11 +11,11 @@ exports.getAllBlog = catchAsyncErrors(async(req,res,next)=>{
 })
 exports.getBlogDetails = catchAsyncErrors(async(req,res,next)=>{
   
-  const blogs = await Blog.findById(req.params.id)
+  const blog = await Blog.findById(req.params.id)
 
   res.status(200).json({
     success:true,
-    blogs
+    blog
   })
 })
 exports.updateBlog = catchAsyncErrors(async(req,res,next)=>{

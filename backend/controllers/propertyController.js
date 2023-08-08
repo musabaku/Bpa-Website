@@ -14,7 +14,7 @@ exports.getAdminProperty = catchAsyncErrors(async (req, res, next) => {
 
 exports.getAllProperty = catchAsyncErrors(async (req, res, next) => {
   // return next(new ErrorHandler("musab not found", 404));
-  const resultPerPage = 8;
+  const resultPerPage = 9;
   const PropertyCount = await Property.countDocuments();
 
   let apiFeatures = new ApiFeatures(Property.find(), req.query)

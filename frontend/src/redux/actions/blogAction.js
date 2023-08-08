@@ -4,7 +4,7 @@ export const getBlog = ()=> async (dispatch) => {
   try {
     dispatch({ type: "blogRequest" });
     const { data } = await axios.get("/api/v1/blog");
-    console.log(data)
+    // console.log(data)
     dispatch({ type: "blogSuccess", payload: data });
   } catch (error) {
     dispatch({ type: "blogFail", payload: error.response.data.message });
@@ -36,7 +36,11 @@ export const createBlog = (BlogData) => async (dispatch) => {
     });
   }
 };
-
+export const clearErrors = () => async (dispatch) => {
+  dispatch({
+    type: "clearErrors"
+  });
+};
 export const updateBlog = (id, BlogData) => async (dispatch) => {
   try {
     dispatch({ type: "updateBlogRequest" });
@@ -82,3 +86,16 @@ export const deleteBlog = (id) => async (dispatch) => {
   }
 };
 
+export const getBlogDetails = (id) => async (dispatch) => {
+  try {
+    dispatch({ type: "blogDetailsRequest" });
+    const { data } = await axios.get(`/api/v1/blog/${id}`);
+    // console.log(data);
+    dispatch({ type: "blogDetailsSuccess", payload: data.blog });
+  } catch (error) {
+    dispatch({
+      type: "blogDetailsFail",
+      payload: error.response.data.message,
+    });
+  }
+};

@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Sidebar from "../Sidebar";
-import { useDispatch } from "react-redux";
-import { createProperty } from "../../../redux/actions/propertyAction";
+import { useDispatch ,useSelector} from "react-redux";
+import { createProperty,clearErrors } from "../../../redux/actions/propertyAction";
 import "./CreateProperty.css"; // Import the CSS file for styling
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
 
 const CreateProperty = () => {
   const dispatch = useDispatch();
+  const { error, success } = useSelector((state) => state.properties);
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -17,6 +22,19 @@ const CreateProperty = () => {
   const [beds, setBeds] = useState("");
   const [area, setArea] = useState("");
   const [baths, setBaths] = useState("");
+
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+      dispatch(clearErrors());
+    }
+
+    if (success) {
+      toast.success("Property Created Successfully");
+      navigate("/admin/dashboard");
+      // dispatch({ type: NEW_PRODUCT_RESET });
+    }
+  }, [dispatch, error, success, navigate]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);

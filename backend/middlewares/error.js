@@ -21,7 +21,7 @@ module.exports = (err,req,res,next) => {
         err = new ErrorHandler(message,400)
     }
     if(err.name === "TokenExpiredError"){
-        const message = "json web token expired, please try again"
+        const message = "TokenExpiredError, please try again"
         err = new ErrorHandler(message,400)
     }
 

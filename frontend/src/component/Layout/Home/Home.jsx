@@ -32,7 +32,7 @@ const Home = () => {
           <h1 className="h1-popular">Popular Properties</h1>
           <div className="big-container">
             {properties &&
-              properties.map((property) => (
+              properties.slice(0, 8).map((property) => (
                 <PropertyCard key={property._id} property={property} />
               ))}
           </div>

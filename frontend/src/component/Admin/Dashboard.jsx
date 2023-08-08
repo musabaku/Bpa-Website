@@ -8,6 +8,7 @@ const Dashboard = () => {
   const dispatch = useDispatch();
 
   const { properties } = useSelector((state) => state.properties);
+  const { blogs } = useSelector((state) => state.blogs);
 
 
 
@@ -31,6 +32,13 @@ const Dashboard = () => {
             <Link to="/admin/allproperty">
               <p>Properties</p>
               <p>{properties && properties.length}</p>
+            </Link>
+           
+          </div>
+          <div className="dashboardSummaryBox2">
+            <Link to="/admin/allblog">
+              <p>Blogs</p>
+              <p>{blogs && blogs.length}</p>
             </Link>
            
           </div>

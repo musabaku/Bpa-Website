@@ -1,26 +1,54 @@
-import React,{Fragment} from 'react'
+import React,{Fragment,useEffect} from 'react'
 import Sidebar from '../Sidebar'
 import { useSelector, useDispatch } from "react-redux";
-import { deleteProperty } from "../../../redux/actions/propertyAction";
+import { deleteProperty,getAdminProperty,clearErrors } from "../../../redux/actions/propertyAction";
 import { FaEye, FaTrash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./PropertyList.css"
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import PropertyDescription from "./PropertyDescription"; 
+import { useNavigate } from "react-router-dom";
+
 const PropertyList = () => {
 
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  const {  properties } = useSelector((state) => state.properties);
+  const {properties, error, error:deleteError, isDeleted } = useSelector((state) => state.properties);
 
   // const { error: deleteError, isDeleted } = useSelector(
   //   (state) => state.Property
   // );
 
+
+  console.log(properties)
   const deletePropertyHandler = (id) => {
     dispatch(deleteProperty(id));
   };
+  useEffect(() => {
+    if (error) {
+      toast.error(error);
+      dispatch(clearErrors());
+    }
 
+    if (deleteError) {
+      toast.error(deleteError);
+      dispatch(clearErrors());
+    }
+
+    if (isDeleted) {
+      toast.success("Product Deleted Successfully");
+      navigate("/admin/dashboard");
+      // dispatch({ type: DELETE_PRODUCT_RESET });
+    }
+
+    dispatch(getAdminProperty());
+  }, [dispatch, error, deleteError, isDeleted, navigate]
+
+  
+  
+  );
   return (
 
     <Fragment>

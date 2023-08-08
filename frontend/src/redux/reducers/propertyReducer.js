@@ -9,8 +9,24 @@ export const propertyReducer = createReducer(
     propertySuccess: (state, action) => {
       state.loading = false;
       state.properties = action.payload.property;
+      state.PropertyCount=action.payload.PropertyCount;
+      state.resultPerPage=action.payload.resultPerPage;
+      state.filteredPropertyCount=action.payload.filteredPropertyCount;
     },
     propertyFail: (state, action) => {
+      state.loading = false;
+      state.properties = null;
+      state.error = action.payload;
+    },
+    AdminPropertyRequest: (state) => {
+      state.loading = true;
+    },
+    AdminPropertySuccess: (state, action) => {
+      state.loading = false;
+      state.properties = action.payload.property;
+      state.PropertyCount=action.payload.PropertyCount;
+    },
+    AdminPropertyFail: (state, action) => {
       state.loading = false;
       state.properties = null;
       state.error = action.payload;
@@ -96,6 +112,9 @@ export const updatePropertyReducer = createReducer(
       state.loading = false;
       state.error = action.payload;
     },
+    updatePropertyReset: (state, action) => {
+      state.isUpdated = false;
+    },
     clearErrors: (state) => {
       state.error = null; 
     },
@@ -109,13 +128,14 @@ export const deletePropertyReducer = createReducer(
     },
     deletePropertySuccess: (state, action) => {
       state.loading = false;
-      state.properties = action.payload.property;
       state.isDeleted= action.payload;
     },
     deletePropertyFail: (state, action) => {
       state.loading = false;
-      state.properties = null;
       state.error = action.payload;
+    },
+    updatePropertyReset: (state, action) => {
+      state.isDeleted = false;
     },
     clearErrors: (state) => {
       state.error = null; 

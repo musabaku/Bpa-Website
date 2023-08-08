@@ -2,14 +2,14 @@
 
 import axios from "axios";
 export const getProperty =
-  (keyword = "", location, price = [0, 900000]) =>
+  (keyword = "", currentPage = 1,price = [0, 500000],location) =>
   async (dispatch) => {
     try {
       dispatch({ type: "propertyRequest" });
       // const { data } = await axios.get("/property");
-      let link = `/api/v1/property?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+      let link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
       if (location) {
-        link = `/api/v1/property?keyword=${keyword}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
+        link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
       }
       const { data } = await axios.get(link);
 
@@ -22,8 +22,10 @@ export const getProperty =
 export const getAdminProperty = (id) => async (dispatch) => {
   try {
     dispatch({ type: "AdminPropertyRequest" });
+    console.log("fe")
     const { data } = await axios.get("/api/v1/admin/property");
-    dispatch({ type: "AdminPropertySuccess", payload: data.property });
+    console.log(data)
+    dispatch({ type: "AdminPropertySuccess", payload: data });
   } catch (error) {
     dispatch({
       type: "AdminPropertyFail",
@@ -35,7 +37,7 @@ export const getPropertyDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "propertyDetailsRequest" });
     const { data } = await axios.get(`/api/v1/property/${id}`);
-    console.log(data);
+    // console.log(data);
     dispatch({ type: "propertyDetailsSuccess", payload: data.property });
   } catch (error) {
     dispatch({
@@ -135,3 +137,8 @@ export const deleteProperty = (id) => async (dispatch) => {
   }
 };
 
+export const clearErrors = () => async (dispatch) => {
+  dispatch({
+    type: "clearErrors"
+  });
+};

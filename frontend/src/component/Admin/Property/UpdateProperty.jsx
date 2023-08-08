@@ -1,17 +1,15 @@
-
 import React, { Fragment, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   clearErrors,
   updateProperty,
   getPropertyDetails,
-} from "../actions/PropertyActions";
+} from "../../../redux/actions/propertyAction";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import MetaData from "../layout/MetaData";
-import { FiImage, FiDollarSign, FiFileText, FiLayers, FiBook, FiPlusCircle, FiStar } from "react-icons/fi";
-import SideBar from "./Sidebar";
-import { UPDATE_Property_RESET } from "../constant/PropertyConstant";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import SideBar from "../Sidebar";
 import { useNavigate, useParams } from 'react-router-dom';
 
 const UpdateProperty = () => {
@@ -19,43 +17,37 @@ const UpdateProperty = () => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  const { propertyDetails } = useSelector((state) => state.propertyDetails);
+  const { error, propertyDetails } = useSelector((state) => state.propertyDetails);
 
   const {
-    loading,
-    error: updateError,
-    isUpdated,
-  } = useSelector((state) => state.Property);
+    isUpdated,error: updateError
+  } = useSelector((state) => state.properties);
 
   const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
-  const [Stock, setStock] = useState(0);
-  const [imageUrl, setImageUrl] = useState("");
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
+  const [location, setLocation] = useState("");
+  const [beds, setBeds] = useState("");
+  const [area, setArea] = useState("");
+  const [baths, setBaths] = useState("");
 
-//   const categories = [
-//     "Footwear",
-//     "Laptop",
-//     "SmartPhones",
-//     "Pants",
-//     "Shirts",
-//     "Camera",
-//   ];
-const productId = id;
+  const propertiesId = id;
 
   useEffect(() => {
     if (propertyDetails && propertyDetails._id !== propertiesId) {
-        dispatch(getpropertiesDetails(propertiesId));
-      } else {
-        setName(propertyDetails.name);
-        setDescription(propertyDetails.description);
-        setPrice(propertyDetails.price);
-        setCategory(propertyDetails.category);
-        setStock(propertyDetails.Stock);
-        setImageUrl(propertyDetails.imageUrl);
-      }
-  
+      dispatch(getPropertyDetails(propertiesId));
+    } else {
+      setName(propertyDetails.name);
+      setDescription(propertyDetails.description);
+      setImage(propertyDetails.image);
+      setPrice(propertyDetails.price);
+      setLocation(propertyDetails.location);
+      setBeds(propertyDetails.beds);
+      setArea(propertyDetails.area);
+      setBaths(propertyDetails.baths);
+    }
+
     if (error) {
       toast.error(error);
       dispatch(clearErrors());
@@ -67,37 +59,119 @@ const productId = id;
     }
 
     if (isUpdated) {
-      toast.success("Property Updated Successfully");
-      navigate("/admin/Propertys");
-      dispatch({ type: UPDATE_Property_RESET });
+      navigate("/admin/properties");
     }
-  }, [
-    dispatch,
-    error,
-    navigate,
-    isUpdated,
-    PropertyId,
-    Property,
-    updateError,
-  ]);
+  }, [dispatch, navigate, isUpdated, propertiesId, propertyDetails,error,updateError]);
 
   const updatePropertySubmitHandler = (e) => {
     e.preventDefault();
 
-    const myForm = new FormData();
+    const formData = {
+      name,
+      description,
+      image,
+      price,
+      location,
+      beds,
+      area,
+      baths,
+    };
 
-    myForm.set("name", name);
-    myForm.set("price", price);
-    myForm.set("description", description);
-    myForm.set("category", category);
-    myForm.set("Stock", Stock);
-    myForm.set("imageUrl", imageUrl);
-    dispatch(updateProperty(PropertyId, myForm));
+    dispatch(updateProperty(propertiesId, formData));
   };
 
   return (
     <Fragment>
-    
+      <div className="dashboard">
+        <SideBar />
+
+        <div className="create-property-container">
+          <h2>Update Property</h2>
+          <form onSubmit={updatePropertySubmitHandler}>
+            <div className="form-group">
+              <label htmlFor="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="description">Description:</label>
+              <ReactQuill
+                theme="snow"
+                value={description}
+                onChange={setDescription}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="image">Image Link:</label>
+              <input
+                type="text"
+                id="image"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="price">Price:</label>
+              <input
+                type="number"
+                id="price"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="location">Location:</label>
+              <input
+                type="text"
+                id="location"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="beds">Beds:</label>
+              <input
+                type="number"
+                id="beds"
+                value={beds}
+                onChange={(e) => setBeds(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="area">Area:</label>
+              <input
+                type="number"
+                id="area"
+                value={area}
+                onChange={(e) => setArea(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="baths">Baths:</label>
+              <input
+                type="number"
+                id="baths"
+                value={baths}
+                onChange={(e) => setBaths(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="create-property-button">
+              Update Property
+            </button>
+          </form>
+        </div>
+      </div>
     </Fragment>
   );
 };

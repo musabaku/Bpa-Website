@@ -6,3 +6,78 @@
     margin: 0 auto;
   }
 
+
+  .pagination {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+  }
+  
+  .paginationBox {
+    display: flex;
+    justify-content: center;
+    margin: 6vmax;
+  }
+  
+  .page-item {
+    border: 1px solid rgba(0, 0, 0, 0.269);
+    text-decoration: none;
+    list-style: none;
+    padding: 1vmax 1.5vmax;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  .page-link {
+    text-decoration: none;
+    transition: all 0.3s;
+    font: 300 0.7vmax "Roboto";
+    color: rgb(80, 80, 80);
+  }
+  
+  .page-item:first-child {
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .page-item:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+  
+  .page-item:hover {
+    color: rgb(80, 80, 80);
+  }
+  
+  .pageItemActive {
+    background-color: tomato;
+  }
+
+
+
+  .locationBox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .location-link {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    color: #333;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color:#410954;
+    color: #fbda61;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .location-link.active {
+    color: #410954;
+
+    background-color:#fbda61;
+
+  }

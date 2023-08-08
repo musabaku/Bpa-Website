@@ -16,14 +16,19 @@ import Services from "./component/Layout/Services/Services";
 import About from "./component/About/About";
 import Property from "./component/Property/Property";
 import PropertyDetails from "./component/Property/PropertyDetails";
+import BlogDetails from "./component/Blog/BlogDetails";
 
 import Dashboard from "./component/Admin/Dashboard";
 
 import CreateProperty from "./component/Admin/Property/CreateProperty";
 import PropertyList from "./component/Admin/Property/PropertyList";
+import UpdateProperty from "./component/Admin/Property/UpdateProperty";
 
 import CreateBlog from "./component/Admin/Blog/CreateBlog";
 import BlogList from "./component/Admin/Blog/BlogList";
+import UpdateBlog from "./component/Admin/Blog/UpdateBlog";
+
+
 import AdminLogin from "./component/Layout/Header/AdminLogin";
 
 export default function App() {
@@ -48,18 +53,17 @@ export default function App() {
 
         <Route path="/properties" element={<Property />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
 
         <Route path="/admin/dashboard" element={<Dashboard />} />
 
-
         <Route path="/admin/allproperty" element={<PropertyList />} />
         <Route path="/admin/createproperty" element={<CreateProperty />} />
-        {/* <Route path="/admin/property/:id" element={<PropertyList />} /> */}
+        <Route path="/admin/property/:id" element={<UpdateProperty />} />
 
         <Route path="/admin/createblog" element={<CreateBlog />} />
         <Route path="/admin/allblog" element={<BlogList />} />
-
-        {/* <Route path="/admin/blog/:id" element={<BlogList />} /> */}
+        <Route path="/admin/blog/:id" element={<UpdateBlog />} />
 
         <Route path="/login" element={<AdminLogin />} />
 

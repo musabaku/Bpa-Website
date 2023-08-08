@@ -6,15 +6,15 @@ import {
   getPropertyDetails,
   updatePropertyDescription,
 } from "../../redux/actions/propertyAction";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 import Loader from "../../component/Loader/Loader";
 import { FaBed } from "react-icons/fa";
 import { FaBath } from "react-icons/fa";
 import { BiArea } from "react-icons/bi";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaMoneyCheckDollar } from "react-icons/fa6";
-import feature from "../../images/feature.JPG"
+import feature from "../../images/feature.JPG";
 const PropertyDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
@@ -23,7 +23,6 @@ const PropertyDetails = () => {
   const { loading, propertyDetails } = useSelector(
     (state) => state.propertyDetails
   );
-  const [showEditor, setShowEditor] = useState(false); // New state variable to manage editor visibility
 
   useEffect(() => {
     dispatch(getPropertyDetails(id));
@@ -35,14 +34,6 @@ const PropertyDetails = () => {
     }
   }, [propertyDetails]);
 
-  const handleSave = () => {
-    dispatch(updatePropertyDescription(id, description));
-    setShowEditor(false); // Hide the editor after saving
-  };
-
-  const handleEdit = () => {
-    setShowEditor(true); // Show the editor and save button
-  };
 
   return (
     <div className="propertyMain-details-container">
@@ -50,7 +41,7 @@ const PropertyDetails = () => {
         <Loader />
       ) : (
         <Fragment>
-               <div className="propertyMain-image-features-container">
+          <div className="propertyMain-image-features-container">
             <div className="propertyMain-image-container">
               <img src={propertyDetails.image.url} alt={propertyDetails.name} />
             </div>
@@ -58,8 +49,12 @@ const PropertyDetails = () => {
               <h2>Property Features</h2>
               <img src={feature} alt="feature" className="featuree" />
               <div>
-                <span><FaMoneyCheckDollar /> ${propertyDetails.price}</span>
-                <p><FaLocationDot /> {propertyDetails.location}</p>
+                <span>
+                  <FaMoneyCheckDollar /> ${propertyDetails.price}
+                </span>
+                <p>
+                  <FaLocationDot /> {propertyDetails.location}
+                </p>
               </div>
               <div className="propertyMain-features-details">
                 <div className="propertyMain-feature">
@@ -81,8 +76,28 @@ const PropertyDetails = () => {
             </div>
           </div>
           <div className="propertyMain-info-container">
-            {/* <h1 className="propertyMain-name">{propertyDetails.name}</h1> */}
-            {showEditor ? (
+            <div className="propertyMain-description">
+              <div
+                className="propertyMain-description-text"
+                dangerouslySetInnerHTML={{
+                  __html: propertyDetails.description,
+                }}
+              />
+            </div>
+          </div>
+        </Fragment>
+      )}
+    </div>
+  );
+};
+
+export default PropertyDetails;
+
+{
+  /* <h1 className="propertyMain-name">{propertyDetails.name}</h1> */
+}
+{
+  /* {showEditor ? (
               <div className="propertyMain-description">
                 <ReactQuill
                   theme="snow"
@@ -110,12 +125,5 @@ const PropertyDetails = () => {
                   Edit
                 </button>
               </div>
-            )}
-          </div>
-        </Fragment>
-      )}
-    </div>
-  );
-};
-
-export default PropertyDetails;
+            )} */
+}

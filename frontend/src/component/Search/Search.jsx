@@ -7,19 +7,19 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const [keyword, setKeyword] = useState("");
-  const [location, setLocation] = useState("");
-  const [price, setPrice] = useState([0, 900000]);
+  // const [location, setLocation] = useState("");
+  const [price, setPrice] = useState([0, 500000]);
   const [selectedRange, setSelectedRange] = useState("");
 
-  const locations = [
-    "Avcilar",
-    "Beylikduzu",
-    "Kadikoy",
-    "Sisli",
-    "Basaksehir",
-    "Maslak",
-    "Kucukcekmece",
-  ];
+  // const locations = [
+  //   "Avcilar",
+  //   "Beylikduzu",
+  //   "Kadikoy",
+  //   "Sisli",
+  //   "Basaksehir",
+  //   "Maslak",
+  //   "Kucukcekmece",
+  // ];
 
   const priceRanges = [
     { label: "0-100,000", value: [0, 100000] },
@@ -31,7 +31,7 @@ const Search = () => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(getProperty(keyword, location, price));
+    dispatch(getProperty(keyword, price));
   };
 
   const handlePriceDropdownChange = (selectedValue) => {
@@ -39,12 +39,11 @@ const Search = () => {
       (range) => range.label === selectedValue
     );
     setSelectedRange(selectedValue);
-    setPrice(selectedPriceRange ? selectedPriceRange.value : [0, 900000]);
+    setPrice(selectedPriceRange ? selectedPriceRange.value : [0, 500000]);
   };
 
   const handleReset = () => {
     setKeyword("");
-    setLocation("");
     setSelectedRange("");
     setPrice([0, 500000]);
     dispatch(getProperty()); // Remove the params to reset the search criteria
@@ -59,7 +58,7 @@ const Search = () => {
         onChange={(e) => setKeyword(e.target.value)}
       />
 
-      <div className="dropdown">
+      {/* <div className="dropdown">
         <select
           value={location}
           onChange={(e) => setLocation(e.target.value)}
@@ -71,7 +70,7 @@ const Search = () => {
             </option>
           ))}
         </select>
-      </div>
+      </div> */}
 
       <span className="dropdown">
         {/* <h3>Price Range</h3> */}

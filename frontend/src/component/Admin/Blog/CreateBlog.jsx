@@ -6,7 +6,8 @@ import Sidebar from '../Sidebar';
 import { useDispatch } from "react-redux";
 import { createBlog } from "../../../redux/actions/blogAction";
 import "./CreateBlog.css"; // Import the CSS file for styling
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const CreateBlog = () => {
   const dispatch = useDispatch();
 
