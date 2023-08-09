@@ -50,10 +50,11 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     color: #fbda61;
+    margin: 1vmax 0;
 
   }
   .blogMain-description-text img {
-margin: 1vmax 26vmax;
+margin: 2vmax 28vmax;
 /* border: 1px solid red; */
 width: 450px;
 height: 310px;

@@ -12,7 +12,7 @@ const PropertyManagement = () => {
     <p>At Big Property Agency, we understand that the journey of real estate investment does not end with the purchase of a house in Turkey. That's why we take pride in providing exceptional Property Management Turkey services to our valued customers. Just as we offer the best services for buying a house, we extend our expertise to ensure your investment yields high returns through professional property management.</p>
 
     <h2>Our Commitment to Excellence:</h2>
-    <img src={img2} className='img1' alt='img' />
+    <img src={img2} className='img2' alt='img' />
 
     <p>After you've acquired your property, our professional staff will be by your side every step of the way. We conduct a thorough inspection of your house, identifying any necessary additions or redesigning needs. Our team is dedicated to providing you with all the assistance required to transform your property into a lucrative investment.</p>
 
@@ -20,7 +20,7 @@ const PropertyManagement = () => {
     <p>For those looking to rent their apartments after purchase, we offer comprehensive support to prepare your property for rental income. From helping you furnish the house to making it tenant-ready, we ensure your property is set to attract quality tenants. With our extensive network, we facilitate swift and efficient rental agreements.</p>
 
     <h2>Strategic Marketing:</h2>
-    <img src={img3} className='img1' alt='img' />
+    <img src={img3} className='img2' alt='img' />
 
     <p>At Big Property Agency, we employ both digital and conventional marketing techniques to promote your property. Our team conducts market research to accurately determine the optimal rent price for your apartment in Turkey, maximizing your rental income.</p>
 

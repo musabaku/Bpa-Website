@@ -12,7 +12,7 @@ const Resale = () => {
     <p>When it comes to real estate investment in Turkey, premium resale properties offer an excellent opportunity for savvy investors. These properties, often well-maintained and strategically located, can provide a higher return on investment compared to newly-built properties. At Big Property, we take pride in offering top-notch Resale Property services that ensure fair pricing and a smooth selling experience. In this article, we'll explore why investing in premium resale properties in Turkey can be your ideal choice, backed by our professional resale services.</p>
 
     <h2>The Advantages of Premium Resale Properties:</h2>
-    <img src={img2} className='img1' alt='img' />
+    <img src={img2} className='img2' alt='img' />
 
     <ul>
         <li><strong>Established Locations:</strong> Premium resale properties are usually situated in well-established and sought-after neighborhoods, which have already proven their value and appeal. This can lead to faster appreciation and rental demand.</li>
@@ -22,7 +22,7 @@ const Resale = () => {
     </ul>
 
     <h2>Big Property's Approach to Resale Property Services:</h2>
-    <img src={img3} className='img1' alt='img' />
+    <img src={img3} className='img2' alt='img' />
 
     <p>At Big Property, we differentiate ourselves from other companies by providing a professional and transparent resale process. Our goal is to ensure that you get the best value for your property, and we follow these steps to achieve that:</p>
     <ol>

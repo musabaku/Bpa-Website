@@ -10,6 +10,8 @@
 .countStats-box h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbda61;
 }
 
 .stats-container {
@@ -51,5 +53,6 @@
 
 .stats-card p {
   font-size: 1rem;
-  color: #fff;
+  color: #61fba4;
+  
 }

@@ -14,7 +14,7 @@ const BuyProperty = () => {
     <p>Investing in real estate in Turkey can be a lucrative opportunity for foreign buyers. Thanks to the countrys growing economy, favorable climate, and attractive property prices. However, buying property in Turkey as a foreign buyer involves navigating a complex legal landscape, which can be daunting without the right guidance and knowledge. In this article, we will provide valuable tips and guidance for foreign buyers interested in buying property in Turkey. From researching the market to finalizing the purchase. We cover all the necessary steps to ensure a smooth and successful property purchase process.</p>
 
     <h2>Research the Turkish Property Market:</h2>
-    <img src={img2} className='img1' alt='img' />
+    <img src={img2} className='img2' alt='img' />
 
     <p>Research the Property MarketTo make an informed decision, its important to research the Turkish property market thoroughly. Understand popular cities, regions, and neighborhoods, and consider factors such as property prices, rental yields, infrastructure development, and growth prospects.</p>
 
@@ -22,7 +22,7 @@ const BuyProperty = () => {
     <p>Enlist the services of a reputable real estate agent with experience in working with foreign buyers. A knowledgeable agent can offer valuable insights, assist with property selection, negotiate on your behalf, and guide you through the legal procedures.</p>
 
     <h2>Verify Property Ownership and Title Deeds:</h2>
-    <img src={img3} className='img1' alt='img' />
+    <img src={img3} className='img2' alt='img' />
 
     <p>Verify Property Ownership and Title DeedsBefore proceeding with a purchase, verify the ownership and title deeds of the property. Request the seller to provide a Tapu (title deed) and verify its authenticity with the Land Registry Office. Ensure there are no liens or encumbrances on the property and check for any zoning or usage restrictions.</p>
 

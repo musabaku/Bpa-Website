@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { getAdminProperty } from "../../redux/actions/propertyAction";
 import "./Dashboard.css"
+import { getAdminBlog } from '../../redux/actions/blogAction';
 const Dashboard = () => {
   const dispatch = useDispatch();
 
@@ -14,6 +15,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     dispatch(getAdminProperty());
+    dispatch(getAdminBlog());
   }, [dispatch]);
 
 

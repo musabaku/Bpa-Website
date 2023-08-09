@@ -18,10 +18,7 @@
     /* Add any other styles for the h2 element */
   }
   
-  .create-blog-container form {
-    /* Add any other styles for the form */
-  }
-  
+
   .create-blog-container label {
     display: block;
     margin-bottom: 5px;
@@ -44,11 +41,7 @@
     /* Add any other styles for the button */
   }
   
-  /* Styling for the ReactQuill editor if needed */
-  .react-quill {
-    /* Add any styles for the editor container */
-  }
-  
+
   .react-quill .ql-editor {
     min-height: 200px;
     /* Add any styles for the editor content */

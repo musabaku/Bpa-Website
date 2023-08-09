@@ -19,7 +19,7 @@ const BlogCard = () => {
         <div className="bloghome-container">
           <h2 className="bloghome-box-h2">Latest Posts on Our Blog</h2>
           {blogs &&
-            blogs.map((blog) => <BlogPage blog={blog} key={blog._id} />)}
+            blogs.slice(0, 6).map((blog) => <BlogPage blog={blog} key={blog._id} />)}
         </div>
         <div className="blogButton">
             <button>

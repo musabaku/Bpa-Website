@@ -51,3 +51,18 @@
     /* Add any other styles for the button */
   }
   
+  .create-property-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .create-property-container select:hover {
+    border-color: #007bff;
+  }

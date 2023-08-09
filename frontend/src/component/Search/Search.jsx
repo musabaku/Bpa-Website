@@ -7,20 +7,10 @@ const Search = () => {
   const dispatch = useDispatch();
 
   const [keyword, setKeyword] = useState("");
-  // const [location, setLocation] = useState("");
   const [price, setPrice] = useState([0, 500000]);
   const [selectedRange, setSelectedRange] = useState("");
 
-  // const locations = [
-  //   "Avcilar",
-  //   "Beylikduzu",
-  //   "Kadikoy",
-  //   "Sisli",
-  //   "Basaksehir",
-  //   "Maslak",
-  //   "Kucukcekmece",
-  // ];
-
+ 
   const priceRanges = [
     { label: "0-100,000", value: [0, 100000] },
     { label: "100,000-200,000", value: [100000, 200000] },
@@ -46,7 +36,7 @@ const Search = () => {
     setKeyword("");
     setSelectedRange("");
     setPrice([0, 500000]);
-    dispatch(getProperty()); // Remove the params to reset the search criteria
+    dispatch(getProperty()); 
   };
 
   return (
@@ -58,22 +48,10 @@ const Search = () => {
         onChange={(e) => setKeyword(e.target.value)}
       />
 
-      {/* <div className="dropdown">
-        <select
-          value={location}
-          onChange={(e) => setLocation(e.target.value)}
-        >
-          <option value="">Select Location</option>
-          {locations.map((loc) => (
-            <option key={loc} value={loc}>
-              {loc}
-            </option>
-          ))}
-        </select>
-      </div> */}
+    
 
       <span className="dropdown">
-        {/* <h3>Price Range</h3> */}
+   
         <select
           value={selectedRange}
           onChange={(e) => handlePriceDropdownChange(e.target.value)}
@@ -97,3 +75,4 @@ const Search = () => {
 };
 
 export default Search;
+

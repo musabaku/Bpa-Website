@@ -14,7 +14,7 @@ exports.getAdminProperty = catchAsyncErrors(async (req, res, next) => {
 
 exports.getAllProperty = catchAsyncErrors(async (req, res, next) => {
   // return next(new ErrorHandler("musab not found", 404));
-  const resultPerPage = 9;
+  const resultPerPage = 8;
   const PropertyCount = await Property.countDocuments();
 
   let apiFeatures = new ApiFeatures(Property.find(), req.query)
@@ -81,9 +81,25 @@ exports.updateProperty = catchAsyncErrors(async (req, res, next) => {
   });
 });
 
+// exports.deleteProperty = catchAsyncErrors(async (req, res, next) => {
+//   await Property.findOneAndDelete(req.params.id);
+//   res.status(200).json({
+//     success: true,
+//   });
+// });
+
 exports.deleteProperty = catchAsyncErrors(async (req, res, next) => {
-  await Property.findOneAndDelete(req.params.id);
+  const deletedProperty = await Property.findByIdAndDelete(req.params.id);
+  console.log(req.params.id)
+  console.log(deletedProperty)
+  if (!deletedProperty) {
+    // return next(new ErrorHandler("Property not found", 404));
+    console.log("notfound")
+  }
+
+ 
   res.status(200).json({
     success: true,
+    message: "Property deleted successfully",
   });
 });

@@ -2,12 +2,15 @@
 
 .blog-mainpage {
     background-color: #fbcd61;
+    background-color: #b382b6;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin: 16px;
     max-width: 300px;
     transition: transform 0.2s;
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
   }
   
   .blog-mainpage:hover {
@@ -41,12 +44,13 @@
   .blog-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color:#61fba4;
+    background-color:#61fbf3;
     color: #410954;
     text-decoration: none;
     font-size: 18px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
     margin-top: 2vmax;
+    /* color:#61fbf3 ; */
 
   }

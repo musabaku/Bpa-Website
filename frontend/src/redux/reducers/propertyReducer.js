@@ -76,7 +76,7 @@ export const updatePropertyDescriptionReducer = createReducer({property:{}},{
   },
 })
 
-export const newPropertyReducer = createReducer(
+export const createPropertyReducer = createReducer(
   {properties:[]},
   {
     createPropertyRequest: (state) => {
@@ -84,8 +84,6 @@ export const newPropertyReducer = createReducer(
     },
     createPropertySuccess: (state, action) => {
       state.loading = false;
-      state.success= action.payload.success;
-
       state.properties = action.payload.property;
     },
     createPropertyFail: (state, action) => {
@@ -93,50 +91,51 @@ export const newPropertyReducer = createReducer(
       
       state.error = action.payload;
     },
+    // createPropertyReset: (state, action) => {
+    //   state.isCreated = false;
+    // },
     clearErrors: (state) => {
       state.error = null; 
     },
   }
 );
 export const updatePropertyReducer = createReducer(
-  {properties:[],isUpdated:[]},
+  {properties:[]},
   {
     updatePropertyRequest: (state) => {
       state.loading = true;
     },
     updatePropertySuccess: (state, action) => {
       state.loading = false;
-      state.isUpdated= action.payload;
     },
     updatePropertyFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
     },
-    updatePropertyReset: (state, action) => {
-      state.isUpdated = false;
-    },
+    // updatePropertyReset: (state, action) => {
+    //   state.isUpdated = false;
+    // },
     clearErrors: (state) => {
       state.error = null; 
     },
   }
 );
 export const deletePropertyReducer = createReducer(
-  {properties:[],isDeleted:[]},
+  {properties:[]},
   {
     deletePropertyRequest: (state) => {
       state.loading = true;
     },
     deletePropertySuccess: (state, action) => {
       state.loading = false;
-      state.isDeleted= action.payload;
     },
     deletePropertyFail: (state, action) => {
       state.loading = false;
       state.error = action.payload;
     },
-    updatePropertyReset: (state, action) => {
-      state.isDeleted = false;
-    },
+    // deletePropertyReset: (state, action) => {
+    //   state.isDeleted = false;
+    // },
     clearErrors: (state) => {
       state.error = null; 
     },

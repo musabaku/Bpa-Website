@@ -1,23 +1,32 @@
 .tc {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #410954;
+
 }
 
-h1 {
+.tc h1 {
   font-size: 32px;
-  margin-bottom: 20px;
+  margin: 20px;
+  color: #fbda61;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+text-align: center;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.tc h2 {
+  font-size: 22px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  color: #fbda61;
+  margin: 1vmax 0;
 }
 
 .ptcc {
   font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
-  margin-bottom: 20px;
+  color: #61fb82;
 }
 
 .tc-link {

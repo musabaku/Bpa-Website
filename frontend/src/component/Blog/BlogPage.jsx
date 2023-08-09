@@ -3,10 +3,7 @@ import "./BlogPage.css";
 import { Link } from "react-router-dom";
 
 const BlogPage = ({ blog }) => {
-  console.log("wwat")
 
-  console.log(blog._id)
-  console.log(blog)
 
   return (
     <>

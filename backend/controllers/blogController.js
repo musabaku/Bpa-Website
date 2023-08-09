@@ -3,12 +3,24 @@ const Blog = require("../models/blogModel.js")
 
 exports.getAllBlog = catchAsyncErrors(async(req,res,next)=>{
   const blogs = await Blog.find()
+  const BlogCount = await Blog.countDocuments();
 
   res.status(200).json({
     success:true,
-    blogs
+    blogs,
+    BlogCount
   })
 })
+
+exports.getAdminBlog = catchAsyncErrors(async (req, res, next) => {
+
+  const blogs = await Blog.find();
+
+  res.status(200).json({
+    success: true,
+    blogs,
+  });
+});
 exports.getBlogDetails = catchAsyncErrors(async(req,res,next)=>{
   
   const blog = await Blog.findById(req.params.id)

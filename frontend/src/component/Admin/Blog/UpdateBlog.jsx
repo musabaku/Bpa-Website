@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import Sidebar from '../Sidebar';
+import Sidebar from "../Sidebar";
 import { useDispatch, useSelector } from "react-redux";
-import { updateBlog, getBlogDetails,clearErrors } from "../../../redux/actions/blogAction";
+import {
+  updateBlog,
+  getBlogDetails,
+  clearErrors,
+} from "../../../redux/actions/blogAction";
 import { useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,10 +18,7 @@ const UpdateBlog = () => {
 
   const { error, blogDetails } = useSelector((state) => state.blogDetails);
 
-  const {
-    isUpdated,
-    error: updateError,
-  } = useSelector((state) => state.blogs);
+  const { error: updateError } = useSelector((state) => state.updateBlog);
 
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -41,16 +42,11 @@ const UpdateBlog = () => {
       toast.error(updateError);
       dispatch(clearErrors());
     }
-
-
-    if (isUpdated) {
-      toast.success("Product Updated Successfully");
-      dispatch({ type: updatePropertyReset });
-
-      navigate("/admin/blogs");
-    }
-  }, [dispatch, navigate, isUpdated, blogDetails, error, updateError, id]);
-
+  }, [dispatch, navigate, blogDetails, error, updateError, id]);
+  const updateHandler = () => {
+    navigate("/admin/allblog");
+    toast.success("Blog Updated Successfully");
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -60,6 +56,7 @@ const UpdateBlog = () => {
     };
 
     dispatch(updateBlog(id, formData));
+    updateHandler();
   };
 
   return (

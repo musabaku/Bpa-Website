@@ -10,7 +10,18 @@ export const getBlog = ()=> async (dispatch) => {
     dispatch({ type: "blogFail", payload: error.response.data.message });
   }
 };
-
+export const getAdminBlog = () => async (dispatch) => {
+  try {
+    dispatch({ type: "AdminBlogRequest" });
+    const { data } = await axios.get("/api/v1/admin/blog");
+    dispatch({ type: "AdminBlogSuccess", payload: data });
+  } catch (error) {
+    dispatch({
+      type: "AdminBlogFail",
+      payload: error.response.data.message,
+    });
+  }
+};
 export const createBlog = (BlogData) => async (dispatch) => {
   try {
     dispatch({ type: "createBlogRequest" });

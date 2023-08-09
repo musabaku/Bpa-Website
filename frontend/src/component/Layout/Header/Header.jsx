@@ -31,18 +31,18 @@ const Header = () => {
         </div>
 
         <div className="box2">
-          <span>
-            <FaFacebookF />
-          </span>
-          <span>
-            <FaInstagram />
-          </span>
-          <span>
-            <FaYoutube />
-          </span>
-          <span>
-            <FaLinkedin />
-          </span>
+        <a href="https://www.facebook.com/bigpropertyagency/" target="_blank" rel="noopener noreferrer">
+            <span><FaFacebookF /></span>
+          </a>
+          <a href="https://www.instagram.com/bigpropertyagency/?hl=tr" target="_blank" rel="noopener noreferrer">
+            <span><FaInstagram /></span>
+          </a>
+          <a href="https://www.youtube.com/channel/UCS6Nnhau3lGqoGIlcPf_EhA/" target="_blank" rel="noopener noreferrer">
+            <span><FaYoutube /></span>
+          </a>
+          <a href="https://www.linkedin.com/company/bigpropertyagency" target="_blank" rel="noopener noreferrer">
+            <span><FaLinkedin /></span>
+          </a>
         </div>
       </div>
 

@@ -19,12 +19,10 @@ export const getProperty =
     }
   };
 
-export const getAdminProperty = (id) => async (dispatch) => {
+export const getAdminProperty = () => async (dispatch) => {
   try {
     dispatch({ type: "AdminPropertyRequest" });
-    console.log("fe")
     const { data } = await axios.get("/api/v1/admin/property");
-    console.log(data)
     dispatch({ type: "AdminPropertySuccess", payload: data });
   } catch (error) {
     dispatch({
@@ -37,7 +35,6 @@ export const getPropertyDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "propertyDetailsRequest" });
     const { data } = await axios.get(`/api/v1/property/${id}`);
-    // console.log(data);
     dispatch({ type: "propertyDetailsSuccess", payload: data.property });
   } catch (error) {
     dispatch({
@@ -122,7 +119,6 @@ export const updateProperty = (id, propertyData) => async (dispatch) => {
 export const deleteProperty = (id) => async (dispatch) => {
   try {
     dispatch({ type: "deletePropertyRequest" });
-
     const { data } = await axios.delete(`/api/v1/admin/property/${id}`);
 
     dispatch({

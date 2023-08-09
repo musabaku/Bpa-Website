@@ -1,13 +1,54 @@
 .buyproperty-container{
     width: 80vw;
   
-    margin: auto
-
+    margin: auto;
+    /* max-width: 900px; */
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #410954;
+  
 }
 .img1{
-    width: 700px;
-    height: 400px;
-    display: flex;
+    max-width: 100%;
+    max-height: 350px; /* Set your desired maximum height here */
+    height: auto;
+    /* border-radius: 8px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin: 1vmax 21vmax;
 
-    margin: auto;
 }
+.img2{
+
+    margin: 2vmax 21vmax;
+    /* border: 1px solid red; */
+    width: 450px;
+    height: 310px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+
+}
+
+
+  .buyproperty-container h1 {
+    font-size: 32px;
+    margin: 20px;
+    color: #fbda61;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  }
+  
+  .buyproperty-container h2 {
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #fbda61;
+    margin: 1vmax 0;
+  }
+  
+ .buyproperty-container p {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: #61fb82;
+  }
+  

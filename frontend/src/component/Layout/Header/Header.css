@@ -52,6 +52,8 @@ a {
 }
 .box1 > p {
   margin: 0 3vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 13px;
 }
 .admin-log, .admin-db{
   margin: 0 3vmax;
@@ -70,7 +72,18 @@ cursor: pointer;
 }
 .box2{
   padding: 0.5vmax;
+  color: white !important; /* Change the icon color to white */
+  margin: 0.5vmax;
+  text-decoration: none;
 }
-.box2 > span{
-margin: 1vmax;
+
+
+.box2 > a {
+  margin: 1vmax;
+  text-decoration: none;
+  color: white !important; /* Change the icon color to white */
+  margin: 1vmax;
+  text-decoration: none;
 }
+
+

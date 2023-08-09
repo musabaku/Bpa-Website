@@ -1,5 +1,9 @@
 import "./style.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Header from "./component/Layout/Header/Header";
 import Home from "./component/Layout/Home/Home";
 import Footer from "./component/Layout/Footer/Footer";
@@ -68,6 +72,7 @@ export default function App() {
         <Route path="/login" element={<AdminLogin />} />
 
       </Routes>
+      <ToastContainer /> 
       <Footer />
     </Router>
   );

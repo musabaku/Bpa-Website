@@ -13,19 +13,16 @@ const Property = () => {
   const [selectedlocation, setSelectedlocation] = useState("");
   const { keyword } = useParams();
 
-  const locations = [
-    "Bağcilar",
-    "Bahçeşehir",
-    "Başakşehir",
-    "Beylikdüzü",
-    "Kadiköy",
-    "Kağithane",
-    "Esenyurt",
-    "Şişli",
-    "Üsküdar",
-    "Zeytinburnu"
+
+  
+  const locations= [
+    "Bagcilar",
+    "Bahcesehir",
+    "Kadikoy",
+    "Kagithane",
+    "Sisli",
+    "Uskudar",
   ];
-  ;
   
   const dispatch = useDispatch();
 

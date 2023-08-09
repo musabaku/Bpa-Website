@@ -5,7 +5,7 @@ import TCshort from "./TCshort";
 import CountStats from "./CountStats";
 import AboutShort from "./AboutShort";
 // import RecentBlog from './RecentBlog.jsx';
-
+import Search from "../../Search/Search";
 import BlogCard from "./BlogCard.jsx";
 import { useDispatch, useSelector } from "react-redux";
 import { getProperty } from "../../../redux/actions/propertyAction";
@@ -28,6 +28,7 @@ const Home = () => {
       ) : (
         <Fragment>
           <ImageSlider />
+          <Search />
 
           <h1 className="h1-popular">Popular Properties</h1>
           <div className="big-container">

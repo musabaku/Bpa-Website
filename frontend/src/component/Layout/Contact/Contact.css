@@ -1,24 +1,156 @@
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    bottom: -50px !important;
-  }
+.contacts {
+  text-align: center;
+  padding: 40px 0;
+  height: 70vh;
+  background: rgb(2,0,36);
+  background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,43,121,1) 44%, rgba(0,212,255,1) 100%);
   
-  .slick-dots li {
-    margin: 0 0.25rem;
+}
+.sm{
+height: 50vh;
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.smh2{
+  color: black !important;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.contacts h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: white;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+@keyframes bouncingDots {
+  0%, 100% {
+    transform: translateY(0);
   }
-  
-  .slick-dots li button {
-    width: 2px !important;
-    height: 2px !important;
-    padding: 0;
-    border-radius: 100%;
-    border: 2px solid #1500ff !important;
-    text-indent: -9999px;
+  50% {
+    transform: translateY(-12px);
   }
-  
-  .slick-dots li.slick-active button {
-    background-color: #1500ff;
-  }
-  
+}
+
+.bouncing-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 4.2vmax;
+}
+
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: yellow;
+  /* border-radius: 50%; */
+  margin: 0 5px;
+  animation: bouncingDots 1.5s infinite;
+  animation-delay: calc(0.2s * var(--dot-index))
+}
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: white;
+
+}
+
+.contact-card {
+  max-width: 250px;
+  padding: 20px;
+  border: 1px solid;
+    border-color: rgb(0, 212, 255);
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+
+}
+.contact-card:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: yellow;
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.contact-card p {
+  font-size: 1rem;
+  color: yellow;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* ... (your existing CSS styles) */
+.sm-title{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-top: 1vmax;
+}
+.youtubeSvgIcon {
+  color: tomato;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+.facebookSvgIcon {
+  color: rgb(59, 89, 152);
+  background-color: rgba(59, 89, 152, 0.2);
+  padding: 8px;
+  border-radius: 15px;
+
+  font-size: 24px;
+}
+
+.linkedinSvgIcon {
+  color: rgb(0, 119, 181);
+  background-color: rgba(0, 119, 181, 0.2);
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+.instagramSvgIcon {
+  color: rgb(144, 81, 202);
+  background-color: rgba(144, 81, 202, 0.2);
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+.youtubeSvgIconT {
+  color: tomato;
+  /* background-color: rgba(255, 0, 0, 0.2); */
+  padding: 8px;
+  font-size: 24px;
+}
+
+.facebookSvgIconT {
+  color: rgb(59, 89, 152);
+  padding: 8px;
+  border-radius: 15px;
+
+  font-size: 24px;
+}
+
+.linkedinSvgIconT {
+  color: rgb(0, 119, 181);
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+
+.instagramSvgIconT {
+  color: rgb(144, 81, 202);
+  padding: 8px;
+  border-radius: 15px;
+  font-size: 24px;
+}
+

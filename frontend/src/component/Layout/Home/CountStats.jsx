@@ -29,7 +29,7 @@ const CountStats = () => {
   return (
     <Fragment>
       <div className="countStats-box">
-        <h2>Numbers say it all</h2>
+        <h2>Numbers Say It All</h2>
         <div className="stats-container">
           {statsData.map((stat, index) => (
             <div className="stats-card" key={index}>
