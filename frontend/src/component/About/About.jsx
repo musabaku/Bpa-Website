@@ -9,11 +9,7 @@ const About = () => {
 
 const departmentsData = [
  
-  {
-    icon: RiAdvertisementLine,
-    title: 'Marketing Department',
-    description: 'Supplies and processes essential real estate information, including news, photos, and videos, for clients.',
-  },
+  
   {
     icon: RiDatabaseLine,
     title: 'Data Department',
@@ -26,13 +22,18 @@ const departmentsData = [
   },
   {
     icon: RiPhoneLine,
-    title: 'Telephone Consultation Department',
-    description: 'Provides expert advice and answers customer inquiries related to real estate.',
+    title: 'Phone Consultation',
+    description: 'Provides expert advice and answers customer inquiries related to all aspects of real estate.',
   },
   {
     icon: RiToolsLine,
-    title: 'After-sale departments Department',
+    title: 'After-sale Department',
     description: 'Assists clients with post-purchase departments such as title deed extraction and property furnishing.',
+  },
+  {
+    icon: RiAdvertisementLine,
+    title: 'Marketing Department',
+    description: 'Supplies and processes essential real estate information, including news, photos, and videos, for clients.',
   },
 ];
   return (

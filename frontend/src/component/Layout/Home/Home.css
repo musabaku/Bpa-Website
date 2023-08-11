@@ -30,6 +30,7 @@
   font: 500 2vmax;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: #410954;
+  color:  #24527a;
 
 }
 .box-viewall{
@@ -42,8 +43,8 @@
 .propButton button{
   padding: 10px 24px;
   
-  color: #fbda61;
-  background-color:#410954;
+  color: white;
+  background-color:#24527a;
 cursor: pointer;
   text-decoration: none;
   font-size: 18px;
@@ -52,8 +53,9 @@ cursor: pointer;
   margin-top: 1vmax;
 }
 .propButton button:hover{
-  color: #410954;
-  background-color:#fbda61;
+  color: #24527a ;
+  background-color:white;
+
 
 }
 /* .header-text1 {
@@ -93,7 +95,9 @@ cursor: pointer;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+  /* background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%); */
+  background-color: #bae8e8;  
+
 }
 
 .blogButton button {

@@ -125,19 +125,16 @@
 .departments {
   text-align: center;
   padding: 40px 0;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    135deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 43, 121, 1) 44%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+
 }
 
 .departments h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
   color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 @keyframes bouncingDots {
   0%,
@@ -198,11 +195,15 @@
 .department-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .department-card p {
   font-size: 1rem;
   color: rgb(0, 255, 13);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 @media (max-width: 768px) {
   .abouth2 > h2 {

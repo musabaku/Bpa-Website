@@ -1,5 +1,6 @@
 import React from 'react';
 import turkish from '../../../images/turkciti.JPG';
+import { Link } from "react-router-dom";
 
 import './TCshort.css';
 const TCshort = () => {
@@ -21,7 +22,10 @@ const TCshort = () => {
             including visa-free travel to many countries and access to a growing
             economy.
           </p>
+          <Link to={"/tc"} >
           <button className="btn-ptc">Read More</button>
+
+            </Link>
 
           <div class="about-design">
                 <div class="sideb-line"></div>

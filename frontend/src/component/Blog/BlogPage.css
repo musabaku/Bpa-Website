@@ -8,8 +8,9 @@
     margin: 16px;
     max-width: 300px;
     transition: transform 0.2s;
-    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+   
+    background-color: #bae8e8;  
+
   }
   
   .blog-mainpage:hover {
@@ -45,6 +46,9 @@
     padding: 12px 24px;
     background-color:#61fbf3;
     color: #410954;
+    color: white;
+    background-color:#24527a;
+  
     text-decoration: none;
     font-size: 18px;
     border-radius: 4px;

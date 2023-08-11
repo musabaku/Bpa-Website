@@ -7,7 +7,10 @@ const PrimeProperties = () => {
   return (
     <div className='buyproperty-container' > 
  
-    <img src={img1} className='img1' alt='img' />
+ <div className='serviceimg'>
+
+<img src={img1} className='img1' alt='img' />
+</div>
     <h1>Discover Prime Properties in Turkey: Best Prices Guaranteed</h1>
 
     <p>If you're looking to invest in real estate in Turkey, you've come to the right place! At Big Property, we take pride in offering top-notch services to help you find the best properties in Turkey at the most affordable prices. With over 12 years of experience and an extensive network in the real estate market, we guide you every step of the way, making your journey to find your ideal house in Istanbul smooth and hassle-free. In this article, we'll explore why discovering prime properties in Turkey with the best prices is an excellent investment choice, backed by our dedicated services.</p>

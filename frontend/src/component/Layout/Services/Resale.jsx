@@ -6,7 +6,10 @@ import img3 from "../../../images/Services/Resale/3.JPG"
 const Resale = () => {
   return (
     <div className='buyproperty-container'  >
-      <img src={img1} className='img1' alt='img' />
+        <div className='serviceimg'>
+
+<img src={img1} className='img1' alt='img' />
+</div>
 
     <h1>Premium Resale Properties in Turkey: Your Ideal Investment</h1>
     <p>When it comes to real estate investment in Turkey, premium resale properties offer an excellent opportunity for savvy investors. These properties, often well-maintained and strategically located, can provide a higher return on investment compared to newly-built properties. At Big Property, we take pride in offering top-notch Resale Property services that ensure fair pricing and a smooth selling experience. In this article, we'll explore why investing in premium resale properties in Turkey can be your ideal choice, backed by our professional resale services.</p>

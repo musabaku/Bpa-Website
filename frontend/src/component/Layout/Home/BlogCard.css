@@ -23,24 +23,13 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 1vmax;
-  background: linear-gradient(45deg, #410954, #0099ff);
-  /* background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%); */
-  /* background-color: white; */
-  background: radial-gradient(
-    circle at -8.9% 51.2%,
-    rgb(255, 124, 0) 0%,
-    rgb(255, 124, 0) 15.9%,
-    rgb(255, 163, 77) 15.9%,
-    rgb(255, 163, 77) 24.4%,
-    rgb(19, 30, 37) 24.5%,
-    rgb(19, 30, 37) 66%
-  );
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
 }
 
 .bloghome-box-h2 {
   font-size: 28px;
   margin-bottom: 10px;
-  color: #fbda61;
+  color: white;
   text-align: center;
   width: 100%;
 }
@@ -50,9 +39,11 @@
   align-items: center;
   justify-content: center;
   padding-bottom: 2vmax;
-  background-color: #131e25;
+  background: linear-gradient(12.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+
 }
 .blogButton button {
-  background-color: #61fba4;
-  color: #410954;
+  color: white;
+  background-color:#24527a;
+
 }

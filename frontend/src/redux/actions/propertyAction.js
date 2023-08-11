@@ -31,7 +31,7 @@ export const getAdminProperty = () => async (dispatch) => {
     dispatch({ type: "AdminPropertyRequest" });
     
     // const { data } = await axios.get("/api/v1/admin/property");
-    const { data } = await axiosInstance.get("/admin/products");
+    const { data } = await axiosInstance.get("/admin/property");
     dispatch({ type: "AdminPropertySuccess", payload: data });
   } catch (error) {
     dispatch({
@@ -44,7 +44,7 @@ export const getPropertyDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "propertyDetailsRequest" });
     // const { data } = await axios.get(`/api/v1/property/${id}`);
-    const { data } = await axiosInstance.get(`/product/${id}`);
+    const { data } = await axiosInstance.get(`/property/${id}`);
 
     dispatch({ type: "propertyDetailsSuccess", payload: data.property });
   } catch (error) {
@@ -115,7 +115,7 @@ console.log(propertyData)
     //   propertyData,
     //   config
     // );
-    const { data } = await axiosInstance.put(`/admin/product/${id}`, propertyData, config);
+    const { data } = await axiosInstance.put(`/admin/property/${id}`, propertyData, config);
 
     dispatch({
       type: "updatePropertySuccess",
@@ -134,7 +134,7 @@ export const deleteProperty = (id) => async (dispatch) => {
   try {
     dispatch({ type: "deletePropertyRequest" });
     // const { data } = await axios.delete(`/api/v1/admin/property/${id}`);
-    const { data } = await axiosInstance.delete(`/admin/product/${id}`);
+    const { data } = await axiosInstance.delete(`/admin/property/${id}`);
 
     dispatch({
       type: "deletePropertySuccess",

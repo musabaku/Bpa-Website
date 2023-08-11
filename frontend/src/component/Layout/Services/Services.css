@@ -22,13 +22,8 @@
   text-align: center;
   padding: 40px 0;
   /* height: 60vh; */
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    135deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 43, 121, 1) 44%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+
 }
 
 .services h2 {
@@ -55,7 +50,8 @@
 .dot {
   height: 20px;
   width: 20px;
-  background-color: yellow;
+  background-color: #61fbf3;
+
   /* border-radius: 50%; */
   margin: 0 5px;
   animation: bouncingDots 1.5s infinite;
@@ -86,16 +82,23 @@
   font-size: 3rem;
   margin-bottom: 15px;
   color: yellow;
+  color:#61fbf3 ;
+
 }
 
 .service-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 .service-card p {
   font-size: 1rem;
   color: yellow;
+  color:#61fbf3 ;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 .guide-services {
   text-align: center;

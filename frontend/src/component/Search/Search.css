@@ -5,7 +5,7 @@
   justify-content: center;
   background: linear-gradient(-20deg, rgb(233, 222, 250) 0%, rgb(251, 252, 219) 100%);
 padding: 20px;
-}
+background: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);}
 
 .search-form input,
 .search-form select {
@@ -43,8 +43,9 @@ padding: 20px;
 .searchButton-prop {
   display: inline-block;
   padding: 7px 24px;
-  color: #fbda61;
-  background-color: #410954;
+  color: white;
+  background-color:#24527a;
+
   cursor: pointer;
   text-decoration: none;
   font-size: 18px;
@@ -56,8 +57,9 @@ padding: 20px;
 .resetButton-prop {
   display: inline-block;
   padding: 7px 24px;
-  background-color: #fbda61;
-  color: #410954;
+  color: #24527a ;
+  background-color:white;
+
   text-decoration: none;
   font-size: 18px;
   cursor: pointer;

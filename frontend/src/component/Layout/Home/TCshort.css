@@ -42,12 +42,16 @@ margin-bottom: 2vmax;
   align-items: center;
 }
 .btn-ptc{
-  border: none;
-  background-color: #d51730;
+  color: white;
+  background-color:#24527a;
+  cursor: pointer;
+  text-decoration: none;
 margin-bottom: 3vmax;
   color: white;
   width: 150px;
   height: 40px;
+  border-radius: 4px;
+transition: background-color 0.3s ease;
 }
 
 .middleb-line {

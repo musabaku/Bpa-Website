@@ -21,7 +21,7 @@ const servicesData = [
   },
   {
     icon: <RiBuilding2Fill />,
-    title: 'Commercial Properties',
+    title: 'Commercial Space',
     description: 'Find the perfect commercial property to grow your business.',
   },
   {

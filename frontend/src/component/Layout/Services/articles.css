@@ -5,21 +5,27 @@
     /* max-width: 900px; */
     /* margin: 0 auto; */
     padding: 20px;
-    background-color: #410954;
+    background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
   
 }
+.serviceimg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .img1{
-    max-width: 100%;
+    width: 70%;
     max-height: 350px; 
     height: auto;
+    
     /* border-radius: 8px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin: 1vmax 21vmax;
+    margin: 1vmax ;
 
 }
 .img2{
 
-    margin: 2vmax 21vmax;
+    margin: 2vmax ;
     /* border: 1px solid red; */
     width: 450px;
     height: 310px;
@@ -32,7 +38,8 @@
   .buyproperty-container h1 {
     font-size: 32px;
     margin: 20px;
-    color: #fbda61;
+    color:  #05004e;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   }
@@ -41,7 +48,8 @@
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-    color: #fbda61;
+    color:  #05004e;
+
     margin: 1vmax 0;
   }
   
@@ -49,6 +57,7 @@
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
-    color: #61fb82;
+    color:  #24527a;
+
   }
   

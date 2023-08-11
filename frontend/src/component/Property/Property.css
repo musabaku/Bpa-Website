@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
+
   }
 
 
@@ -51,15 +53,18 @@
   }
   
   .pageItemActive {
-    background-color:#fbda61;
+    background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
+    
   }
 
 
 
   .locationBox {
+    background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
+
     display: flex;
     justify-content: center;
-    margin: 15px 0;
+    padding: 15px 0 15px 0;
   }
   
   .location-link {
@@ -70,8 +75,9 @@
     margin: 5px;
     cursor: pointer;
     padding: 10px 20px;
-    background-color:#410954;
-    color: #fbda61;
+    color: white;
+    background-color:#24527a;
+  
     text-decoration: none;
     font-size: 18px;
     border-radius: 4px;
@@ -79,10 +85,10 @@
   }
   
   .location-link.active {
-    color: #410954;
-
-    background-color:#fbda61;
-
+    color: #24527a ;
+  
+    background-color:white;
+    border: 1px solid black;
   }
 
 @media (max-width: 768px) {

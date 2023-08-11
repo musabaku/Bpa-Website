@@ -86,7 +86,7 @@ a {
   margin: 0 2vmax;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 930px) {
   .top-header {
     display: none;
   }
@@ -103,6 +103,33 @@ a {
 
   .header-text ul {
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-item {
+    width: 40%;
+    padding: 5px;
+  }
+}
+@media (max-width: 275px) {
+  .top-header {
+    display: none;
+  }
+  .container-header {
+    flex-direction: column;
+  }
+
+  .header-image,
+  .header-text {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .header-text ul {
+    flex-wrap: wrap;
+    text-align: left;
     justify-content: center;
   }
 

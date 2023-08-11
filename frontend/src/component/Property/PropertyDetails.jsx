@@ -22,7 +22,7 @@ const PropertyDetails = () => {
   const { loading, propertyDetails } = useSelector(
     (state) => state.propertyDetails
   );
-
+console.log(propertyDetails)
   useEffect(() => {
     dispatch(getPropertyDetails(id));
   }, [dispatch, id]);

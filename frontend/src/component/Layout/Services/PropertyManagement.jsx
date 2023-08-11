@@ -6,7 +6,10 @@ import img3 from "../../../images/Services/PropertyManagement/3.JPG"
 const PropertyManagement = () => {
   return (
     <div className='buyproperty-container' >
-      <img src={img1} className='img1' alt='img' />
+        <div className='serviceimg'>
+
+<img src={img1} className='img1' alt='img' />
+</div>
    
     <h1>Big Property Agency: Your Trusted Partner for Property Management in Turkey</h1>
     <p>At Big Property Agency, we understand that the journey of real estate investment does not end with the purchase of a house in Turkey. That's why we take pride in providing exceptional Property Management Turkey services to our valued customers. Just as we offer the best services for buying a house, we extend our expertise to ensure your investment yields high returns through professional property management.</p>

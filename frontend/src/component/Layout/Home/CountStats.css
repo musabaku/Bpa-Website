@@ -1,10 +1,12 @@
 .countStats-box {
   background: linear-gradient(135deg, #410954, #0099ff);
+  background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
   padding: 20px;
   border-radius: 10px;
   color: #fff;
   text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .countStats-box h2 {
@@ -12,6 +14,7 @@
   margin-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fbda61;
+  color: white;
 }
 
 .stats-container {
@@ -44,6 +47,7 @@
   font-size: 3rem;
   margin-bottom: 15px;
   color: #fbda61;
+  color: white;
 }
 
 .stats-card h3 {
@@ -53,6 +57,9 @@
 
 .stats-card p {
   font-size: 1rem;
-  color: #61fba4;
-  
+  color: #9cfdff;
+  font: 300 1vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:#61fbf3 ;
+
 }

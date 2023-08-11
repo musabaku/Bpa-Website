@@ -8,7 +8,10 @@ const BuyProperty = () => {
 
   return (
     <div className='buyproperty-container'>
+      <div className='serviceimg'>
+
       <img src={img1} className='img1' alt='img' />
+      </div>
       <h1>Buying Property in Turkey: Legal Procedures and Tips for Foreign Buyers</h1>
     <h2>Introduction:</h2>
     <p>Investing in real estate in Turkey can be a lucrative opportunity for foreign buyers. Thanks to the countrys growing economy, favorable climate, and attractive property prices. However, buying property in Turkey as a foreign buyer involves navigating a complex legal landscape, which can be daunting without the right guidance and knowledge. In this article, we will provide valuable tips and guidance for foreign buyers interested in buying property in Turkey. From researching the market to finalizing the purchase. We cover all the necessary steps to ensure a smooth and successful property purchase process.</p>

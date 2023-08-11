@@ -1,7 +1,7 @@
 .propertyMain-details-container {
  
     padding: 20px;
-    background-color: #D9DFFF;
+    background-color: white;
   }
   
   .propertyMain-image-container img {
@@ -14,6 +14,7 @@
   .propertyMain-description {
     padding: 2vmax;
     background-color: #410954;
+    background: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
  
 
 
@@ -43,6 +44,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     color: #61fb82;
+    color:  #24527a;
 
   }
   .propertyMain-description-text h2 {
@@ -51,16 +53,19 @@
     line-height: 1.5;
     color: #fbda61;
     margin: 1vmax 0;
+    color:  #05004e;
 
   }
   .propertyMain-description-text h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fbda61;
+    color:  #05004e;
 
   }
   .propertyMain-description-text h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fbda61;
+    color:  #05004e;
 
   }
   
@@ -80,7 +85,7 @@
  
   .featuree{
     position: absolute;
-    top: 10vmax;
+    top: 11vmax;
     right: 1.5vmax;
     width: 250px;
     max-height: 280px;
@@ -115,6 +120,8 @@
     padding: 10px;
     width: 50%;
     background-color: #fbda61;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     /* margin-right: 20px; */
@@ -123,7 +130,9 @@
   .propertyMain-features h2 {
     margin-bottom: 10px;
     font-size: 24px;
-    color: #410954;
+    color: white;
+    color: #bae8e8;  
+
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
@@ -135,6 +144,8 @@
     margin: 0;
     font-size: 18px;
     color: #410954;
+    color: white;
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }
@@ -143,6 +154,8 @@
     font-size: 18px;
     color: #410954;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    color: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
 
   }
   
@@ -150,6 +163,8 @@
     font-size: 18px;
     /* margin-bottom: 5px; */
     color: rgb(3, 101, 3);
+    color: white;
+    color: #bae8e8;  
 
   }
   
@@ -170,6 +185,7 @@
     color: #410954;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(3, 101, 3);
+    color: white;
 
   }
   
@@ -177,6 +193,9 @@
     font-size: 20px;
     font-weight: bold;
     color: #410954;
+    color: white;
+    color: linear-gradient(108.1deg, rgb(167, 220, 225) 11.2%, rgb(217, 239, 242) 88.9%);
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }
@@ -185,6 +204,8 @@
     font-size: 24px;
     margin-bottom: 5px;
     color: #410954;
+    color: #bae8e8;  
+
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
   }

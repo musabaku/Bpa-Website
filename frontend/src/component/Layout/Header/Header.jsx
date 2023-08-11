@@ -48,7 +48,10 @@ const Header = () => {
 
       <div className="container-header">
         <div className="header-image">
+        <Link to="/">
+
           <img src={logo} alt="Logo" />
+        </Link>
         </div>
         <div className="header-text">
             
