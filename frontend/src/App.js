@@ -31,49 +31,40 @@ import UpdateProperty from "./component/Admin/Property/UpdateProperty";
 import CreateBlog from "./component/Admin/Blog/CreateBlog";
 import BlogList from "./component/Admin/Blog/BlogList";
 import UpdateBlog from "./component/Admin/Blog/UpdateBlog";
+import { useHistory } from 'react-router-dom';
 
 
 import AdminLogin from "./component/Layout/Header/AdminLogin";
 import React , {useEffect} from "react";
 
 export default function App() {
+  const history = useHistory();
+
   useEffect(() => {
     const currentPath = window.location.pathname;
 
     if (currentPath === '/about') {
-      window.location.pathname = '/about'; // Redirect internally
+      history.push('/about');
     } else if (currentPath === '/services') {
-      window.location.pathname = '/services'; // Redirect internally
-    }
-     else if (currentPath === '/contact-us') {
-      window.location.pathname = '/contact-us'; // Redirect internally
-    }
-     else if (currentPath === '/') {
-      window.location.pathname = '/'; // Redirect internally
-    }
-     else if (currentPath === '/home') {
-      window.location.pathname = '/'; // Redirect internally
-    
+      history.push('/services');
+    } else if (currentPath === '/contact-us') {
+      history.push('/contact-us');
+    } else if (currentPath === '/') {
+      history.push('/');
+    } else if (currentPath === '/home') {
+      history.push('/');
     } else if (currentPath === '/properties') {
-      window.location.pathname = '/properties';
-  }
-     else if (currentPath === '/blog') {
-      window.location.pathname = '/blog';
-  }
-     else if (currentPath === '/tc') {
-      window.location.pathname = '/tc';
-  }
-     else if (currentPath === '/properties') {
-      window.location.pathname = '/properties';
-  }
-     else if (currentPath === '/property/:id') {
-      window.location.pathname = '/property/:id';
-  }
-     else if (currentPath === '/blog/:id') {
-      window.location.pathname = '/blog/:id';
-  }
-  
-}, []);
+      history.push('/properties');
+    } else if (currentPath === '/blog') {
+      history.push('/blog');
+    } else if (currentPath === '/tc') {
+      history.push('/tc');
+    } else if (currentPath === '/property/:id') {
+      history.push('/property/:id');
+    } else if (currentPath === '/blog/:id') {
+      history.push('/blog/:id');
+    }
+  }, [history]);
 
   return (
     <Router>
