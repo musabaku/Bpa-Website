@@ -14,11 +14,7 @@ const path = require("path");
     next();
   });
   
-  app.use(express.static(path.join(__dirname, "../../frontend/build")));
-  
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
-  });
+
   
   
 app.use(express.json())
@@ -26,6 +22,15 @@ app.use(cookieParser())
 app.use("/api/v1",blog)
 app.use("/api/v1",property)
 app.use("/api/v1",admin)
+console.log("aa")
+app.use(express.static(path.join(__dirname, "../../frontend/build")));
+console.log("ab")
+  
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../../frontend/build/index.html"));
+});
+console.log("ac")
+
 app.use(errorMiddleware)
 module.exports = app
 
