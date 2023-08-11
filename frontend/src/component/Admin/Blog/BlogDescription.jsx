@@ -4,7 +4,6 @@ const BlogDescription = ({ description }) => {
   const previewLength = 30;
   const [showMore, setShowMore] = useState(false);
 
-  // Check if the description is available, if not, display a message
   if (!description) {
     return <p>Description not available.</p>;
   }

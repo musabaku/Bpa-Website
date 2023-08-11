@@ -11,7 +11,6 @@ import slid1 from "../../../images/Slider/slid1.JPG";
 import slid2 from "../../../images/Slider/slid2.JPG";
 import slid3 from "../../../images/Slider/slid3.JPG";
 
-// Install Swiper modules
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
 const ImageSlider = () => {

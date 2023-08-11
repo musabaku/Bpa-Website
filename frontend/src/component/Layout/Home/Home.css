@@ -9,7 +9,7 @@
   margin-top: -2px;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
   height: 83vh;
 }
 /* .h1-popular {
@@ -128,26 +128,25 @@ cursor: pointer;
     transform: translateY(10px);
   }
 }
-
 @media (max-width: 768px) {
   .box-viewall {
-    flex-direction: column; /* Change to column layout for mobile view */
-    align-items: center; /* Center align items in the column */
-    text-align: center; /* Center align text in the column */
-    padding: 2vmax 0; /* Adjust padding for mobile view */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2vmax 0;
   }
   
   .h1-popular {
-    font-size: 1.5rem; /* Decrease font size for mobile view */
-    margin-bottom: 1vmax; /* Add some spacing between heading and button */
+    font-size: 1.5rem;
+    margin-bottom: 1vmax;
   }
   
   .propButton {
-    margin-top: 1vmax; /* Add some spacing between button and heading */
+    margin-top: 1vmax;
   }
   
   .propButton button {
-    font-size: 16px; /* Decrease font size for mobile view */
-    padding: 8px 16px; /* Adjust padding for mobile view */
+    font-size: 16px;
+    padding: 8px 16px;
   }
 }

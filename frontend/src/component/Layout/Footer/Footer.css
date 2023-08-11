@@ -17,12 +17,12 @@
 }
 @media (max-width: 768px) {
   .bpa-footer {
-    flex-direction: column; /* Stack content in a column */
-    text-align: center; /* Center align text in mobile view */
-    height: auto; /* Let the content determine the height */
+    flex-direction: column;
+    text-align: center;
+    height: auto;
   }
 
   .footer-text {
-    margin: 10px 0; /* Adjust margin for better spacing */
+    margin: 10px 0; 
   }
 }

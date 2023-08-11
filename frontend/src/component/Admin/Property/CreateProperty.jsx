@@ -4,7 +4,7 @@ import "react-quill/dist/quill.snow.css";
 import Sidebar from "../Sidebar";
 import { useDispatch ,useSelector} from "react-redux";
 import { createProperty,getAdminProperty,clearErrors } from "../../../redux/actions/propertyAction";
-import "./CreateProperty.css"; // Import the CSS file for styling
+import "./CreateProperty.css"; 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from 'react-router-dom';

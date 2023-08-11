@@ -2,14 +2,30 @@ import { useDispatch } from "react-redux";
 import React, { useState } from "react";
 import "./Search.css";
 import { getProperty } from "../../redux/actions/propertyAction";
+// import { useParams } from "react-router-dom";
 
 const Search = ({resetSelectedLocation}) => {
   const dispatch = useDispatch();
+  // const { location,page } = useParams();
+  // const { currentPage } = useParams();
 
   const [keyword, setKeyword] = useState("");
   const [price, setPrice] = useState([0, 500000]);
   const [selectedRange, setSelectedRange] = useState("");
-
+  // const [selectedlocation, setSelectedlocation] = useState("");
+  // const resetSelectedLocation = () => {
+  //   setSelectedlocation(""); 
+  // };
+  
+  // const locations= [
+  //   "Bagcilar",
+  //   "Bahcesehir",
+  //   "Kadikoy",
+  //   "Kagithane",
+  //   "Sisli",
+  //   "Uskudar",
+  // ];
+console.log("here333")
  
   const priceRanges = [
     { label: "0-100,000", value: [0, 100000] },
@@ -21,8 +37,12 @@ const Search = ({resetSelectedLocation}) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    dispatch(getProperty(keyword, price));
+    dispatch(getProperty(keyword,price));
   };
+  // useEffect(() => {
+  //   dispatch(getProperty(keyword,price,currentPage,selectedlocation));
+  // }, [dispatch,keyword,price,currentPage,selectedlocation]);
+  console.log("here444")
 
   const handlePriceDropdownChange = (selectedValue) => {
     const selectedPriceRange = priceRanges.find(
@@ -41,6 +61,7 @@ const Search = ({resetSelectedLocation}) => {
   };
 
   return (
+    <>
     <div className="search-bar">
 
     <form onSubmit={handleSearch} className="search-form">
@@ -76,6 +97,20 @@ const Search = ({resetSelectedLocation}) => {
       </button>
     </form>
     </div>
+   {/* <div className="locationBox">
+   {locations.map((location) => (
+     <span
+       className={`location-link ${
+         location === selectedlocation ? "active" : ""
+       }`}
+       key={location}
+       onClick={() => setSelectedlocation(location)}
+     >
+       {location}
+     </span>
+   ))}
+ </div> */}
+ </>
 
   );
 };

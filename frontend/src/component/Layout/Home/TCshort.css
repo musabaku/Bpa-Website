@@ -19,7 +19,7 @@
 .container{
 background-color: #E6E6E6;
 
-height: 72vh;
+height: auto;
 }
 .text-image >h2 {
 font: 400 1.5vmax;
@@ -59,41 +59,39 @@ margin-bottom: 3vmax;
 
 }
 
-/* Existing CSS */
 
-/* For screens smaller than 768px (typical mobile screens) */
 @media (max-width: 768px) {
   .image > img {
-    width: 100px; /* Reduce image size */
+    width: 100px;
     height: 100px;
   }
 
   .text-image {
-    padding: 2vmax 1vmax; /* Adjust padding for spacing */
+    padding: 2vmax 1vmax;
   }
 
   .text-image > h2 {
-    font-size: 1.2rem; /* Adjust font size for readability */
-    margin-bottom: 1.5vmax; /* Adjust margin for spacing */
+    font-size: 1.2rem;
+    margin-bottom: 1.5vmax;
   }
 
   .p-tc {
-    font-size: 1rem; /* Adjust font size for readability */
-    width: 80%; /* Increase width for better text wrapping */
-    margin-bottom: 1.5vmax; /* Adjust margin for spacing */
+    font-size: 1rem;
+    width: 80%;
+    margin-bottom: 1.5vmax;
   }
 
   .btn-ptc {
-    width: 120px; /* Reduce button width */
-    height: 36px; /* Reduce button height */
+    width: 120px;
+    height: 36px;
     margin-bottom: 2vmax;
   }
 
   .container {
-    height: auto; /* Auto adjust height */
+    height: auto;
   }
 
   .about-design {
-    display: none; /* Hide the decorative lines on smaller screens */
+    display: none;
   }
 }

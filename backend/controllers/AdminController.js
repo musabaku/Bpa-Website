@@ -25,7 +25,6 @@ exports.adminLogin = catchAsyncErrors(async (req, res, next) => {
 
     sendToken(admin, 200, res);
   } catch (error) {
-    // Handle any other unexpected errors
     console.log("Error during login:", error);
     return next(new ErrorHandler("Something went wrong during login", 500));
   }

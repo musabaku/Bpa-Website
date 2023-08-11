@@ -42,7 +42,6 @@ const BlogList = () => {
   }, [dispatch, navigate, deleteError]);
   return (
     <Fragment>
-      {/* <MetaData title={`ALL blogs - Admin`} /> */}
 
       <div className="dashboard">
         <Sidebar />

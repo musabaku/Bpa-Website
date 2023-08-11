@@ -1,4 +1,5 @@
 // const server = "http://localhost:4000/api/v1"
+import axiosInstance from "../axios"
 
 import axios from "axios";
 export const getProperty =
@@ -11,7 +12,8 @@ export const getProperty =
       if (location) {
         link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
       }
-      const { data } = await axios.get(link);
+      // const { data } = await axios.get(link);
+      const { data } = await axiosInstance.get(link);
 
       dispatch({ type: "propertySuccess", payload: data });
     } catch (error) {
@@ -23,7 +25,9 @@ export const getProperty =
 export const getAdminProperty = () => async (dispatch) => {
   try {
     dispatch({ type: "AdminPropertyRequest" });
-    const { data } = await axios.get("/api/v1/admin/property");
+    
+    // const { data } = await axios.get("/api/v1/admin/property");
+    const { data } = await axiosInstance.get("/admin/products");
     dispatch({ type: "AdminPropertySuccess", payload: data });
   } catch (error) {
     dispatch({
@@ -35,7 +39,9 @@ export const getAdminProperty = () => async (dispatch) => {
 export const getPropertyDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "propertyDetailsRequest" });
-    const { data } = await axios.get(`/api/v1/property/${id}`);
+    // const { data } = await axios.get(`/api/v1/property/${id}`);
+    const { data } = await axiosInstance.get(`/product/${id}`);
+
     dispatch({ type: "propertyDetailsSuccess", payload: data.property });
   } catch (error) {
     dispatch({
@@ -72,11 +78,13 @@ export const createProperty = (propertyData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 
-    const { data } = await axios.post(
-      `/api/v1/admin/property/new`,
-      propertyData,
-      config
-    );
+    // const { data } = await axios.post(
+    //   `/api/v1/admin/property/new`,
+    //   propertyData,
+    //   config
+    // );
+    const { data } = await axiosInstance.post("/admin/property/new", propertyData, config);
+
 
     dispatch({
       type: "createPropertySuccess",
@@ -98,11 +106,12 @@ export const updateProperty = (id, propertyData) => async (dispatch) => {
       headers: { "Content-Type": "application/json" },
     };
 console.log(propertyData)
-    const { data } = await axios.put(
-      `/api/v1/admin/property/${id}`,
-      propertyData,
-      config
-    );
+    // const { data } = await axios.put(
+    //   `/api/v1/admin/property/${id}`,
+    //   propertyData,
+    //   config
+    // );
+    const { data } = await axiosInstance.put(`/admin/product/${id}`, propertyData, config);
 
     dispatch({
       type: "updatePropertySuccess",
@@ -120,7 +129,8 @@ console.log(propertyData)
 export const deleteProperty = (id) => async (dispatch) => {
   try {
     dispatch({ type: "deletePropertyRequest" });
-    const { data } = await axios.delete(`/api/v1/admin/property/${id}`);
+    // const { data } = await axios.delete(`/api/v1/admin/property/${id}`);
+    const { data } = await axiosInstance.delete(`/admin/product/${id}`);
 
     dispatch({
       type: "deletePropertySuccess",

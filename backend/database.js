@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
-const Admin = require('./models/adminModel'); // Make sure to import the Admin model from your adminModel.js file
+const Admin = require('./models/adminModel'); 
 
 async function createAdmin() {
   try {
@@ -9,19 +9,16 @@ async function createAdmin() {
 
     // const hashedPassword = await bcrypt.hash(plainPassword, saltRounds);
 
-    // Create the admin user object
     const adminUser = new Admin({
-      email: 'musabadmin1@gmail.com', // Replace with the admin's email
+      email: 'musabadmin1@gmail.com', 
       password: plainPassword,
     });
 
-    // Save the admin user object to the database
     const savedAdmin = await adminUser.save();
     console.log('Admin user created:', savedAdmin);
   } catch (error) {
     console.error('Error creating admin user:', error);
   } finally {
-    // Close the MongoDB connection after creating the admin user
     mongoose.connection.close();
   }
 }
@@ -29,7 +26,6 @@ async function createAdmin() {
 const connectDataBase = () => {
   mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log(`Connected to MongoDB successfully`);
-    // createAdmin();
   }).catch((err) => {
     console.log(err);
   });

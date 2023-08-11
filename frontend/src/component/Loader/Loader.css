@@ -10,7 +10,7 @@
   .loading > div {
     width: 10vmax;
     height: 10vmax;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid #D51730;
     border-radius: 50%;
     animation: loadingRotate 800ms linear infinite;
   }

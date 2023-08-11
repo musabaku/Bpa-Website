@@ -5,6 +5,24 @@ const blog = require("./routes/blogRoute.js")
 const property = require("./routes/propertyRoute.js")
 const admin = require("./routes/adminRoute.js")
 const errorMiddleware = require("./middlewares/error.js") 
+const path = require("path");
+if (process.env.NODE_ENV !== "PRODUCTION") {
+    require("dotenv").config({ path: "Backend/config/.env" });
+  }
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+  });
+  
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
+  
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend/build/index.html"));
+  });
+  
+  
 app.use(express.json())
 app.use(cookieParser())
 app.use("/api/v1",blog)
@@ -12,3 +30,7 @@ app.use("/api/v1",property)
 app.use("/api/v1",admin)
 app.use(errorMiddleware)
 module.exports = app
+
+
+
+

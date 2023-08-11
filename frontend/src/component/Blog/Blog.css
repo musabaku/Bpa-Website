@@ -49,7 +49,6 @@
   color: #fbda61;
 }
 
-/* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .blogmain-box {
     flex-direction: column;

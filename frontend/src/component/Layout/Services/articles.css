@@ -10,7 +10,7 @@
 }
 .img1{
     max-width: 100%;
-    max-height: 350px; /* Set your desired maximum height here */
+    max-height: 350px; 
     height: auto;
     /* border-radius: 8px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 

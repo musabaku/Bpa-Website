@@ -46,7 +46,6 @@ width: 100%;
   background-color: #0062cc;
 }
 
-/* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .aboutTc-image {
     width: 100%;

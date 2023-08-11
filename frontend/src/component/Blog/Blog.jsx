@@ -1,13 +1,14 @@
 import "./Blog.css";
 import BlogPage from "./BlogPage";
 import RecentProperty from "./RecentProperty";
-import React, { useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getBlog } from "../../redux/actions/blogAction";
 import { getProperty } from "../../redux/actions/propertyAction";
+import Loader from "../Loader/Loader";
 const Blog = () => {
   const dispatch = useDispatch();
-  const { properties } = useSelector((state) => state.properties);
+  const {  properties } = useSelector((state) => state.properties);
 
   useEffect(() => {
     dispatch(getProperty());
@@ -15,11 +16,15 @@ const Blog = () => {
   }, [dispatch]);
 
 
-  const { blogs } = useSelector((state) => state.blogs);
-
+  const { loading, blogs } = useSelector((state) => state.blogs);
   return (
-    <>
-      <div className="blogmain-box">
+    <Fragment>
+{loading ? (
+ <Loader />
+) : 
+(<Fragment>
+
+<div className="blogmain-box">
         <div className="blogmain-container">
           <h1>Our Blog</h1>
           <p>
@@ -44,7 +49,10 @@ const Blog = () => {
               ))}
         </div>
       </div>
-    </>
+</Fragment>)}
+</Fragment>
+  
+  
   );
 };
 

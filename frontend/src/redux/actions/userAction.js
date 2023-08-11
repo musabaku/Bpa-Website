@@ -1,11 +1,12 @@
-import axios from "axios";
+// import axios from "axios";
+import axiosInstance from "../axios";
 
 export const login = (loginEmail, loginPassword) => async (dispatch) => {
   try {
     dispatch({ type: "userRequest" });
     const config = { headers: { "Content-type": "application/json" } };
 
-    const { data } = await axios.post("/api/v1/login", {
+    const { data } = await axiosInstance.post("/api/v1/login", {
       email: loginEmail,
       password: loginPassword,
     },config);

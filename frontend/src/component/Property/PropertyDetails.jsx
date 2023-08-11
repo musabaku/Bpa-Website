@@ -6,8 +6,7 @@ import {
   getPropertyDetails,
   updatePropertyDescription,
 } from "../../redux/actions/propertyAction";
-// import ReactQuill from "react-quill";
-// import "react-quill/dist/quill.snow.css";
+
 import Loader from "../../component/Loader/Loader";
 import { FaBed } from "react-icons/fa";
 import { FaBath } from "react-icons/fa";
@@ -93,37 +92,3 @@ const PropertyDetails = () => {
 
 export default PropertyDetails;
 
-{
-  /* <h1 className="propertyMain-name">{propertyDetails.name}</h1> */
-}
-{
-  /* {showEditor ? (
-              <div className="propertyMain-description">
-                <ReactQuill
-                  theme="snow"
-                  value={description}
-                  onChange={(value) => setDescription(value)}
-                  style={{ fontFamily: "sans-serif" }}
-                />
-                <button
-                  className="propertyMain-save-button"
-                  onClick={handleSave}
-                >
-                  Save
-                </button>
-              </div>
-            ) : (
-              <div className="propertyMain-description">
-                <div
-                  className="propertyMain-description-text"
-                  dangerouslySetInnerHTML={{ __html: description }}
-                />
-                <button
-                  className="propertyMain-edit-button"
-                  onClick={handleEdit}
-                >
-                  Edit
-                </button>
-              </div>
-            )} */
-}

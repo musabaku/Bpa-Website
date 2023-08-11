@@ -6,7 +6,7 @@
   
   .propertyMain-image-container img {
     max-width: 100%;
-    max-height: 400px; /* Set your desired maximum height here */
+    max-height: 400px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  }
@@ -83,7 +83,7 @@
     top: 10vmax;
     right: 1.5vmax;
     width: 250px;
-    max-height: 280px; /* Set your desired maximum height here */
+    max-height: 280px;
     height: auto;
     border-radius: 10px;
   animation: upDownAnimation 1s ease-in-out infinite alternate;
@@ -190,9 +190,7 @@
   }
   
 
-  /* PropertyDetails.css */
 
-/* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .propertyMain-details-container {
     padding: 10px;
@@ -205,7 +203,7 @@
   }
 
   .propertyMain-image-container img {
-    max-height: 300px; /* Adjust the max-height to your preference */
+    max-height: 300px; 
     width: 100%;
   }
 
@@ -245,12 +243,12 @@
 
   .featuree {
     width: 180px;
-    max-height: 200px; /* Adjust the max-height to your preference */
+    max-height: 200px; 
     position: absolute;
     top: 62vmax;
     right: 1.5vmax;
     width: 150px;
-    max-height: 80px; /* Set your desired maximum height here */
+    max-height: 80px; 
     height: auto;
     border-radius: 10px;
   animation: leftRightAnimation 1s ease-in-out infinite alternate;

@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
 import './AboutShort.css';
-import bestPrice from '../../../images/About/bestPrice.JPG';
+import cusservice from '../../../images/aboutShort/cusservice.JPG';
+import customer from '../../../images/aboutShort/customer.JPG';
+import growth from '../../../images/aboutShort/growth.JPG';
+import industry from '../../../images/aboutShort/inndustry.JPG';
 const AboutShort = () => {
   return (
     <Fragment>
@@ -22,37 +25,36 @@ const AboutShort = () => {
         </div>
         <div className="about-logo-box">
           <div className="box-container">
-            <img src={bestPrice} alt="Logo" className="logo" />
+            <img src={industry} alt="Logo" className="logo" />
             <div className="content">
-              <h3>Extensive Product Selection</h3>
+              <h3>Extensive Industry Experience</h3>
               <p className="text">
-              Discover a wide variety of products across multiple categories for all your shopping needs.</p>
+              With over 12 years in the Turkish real estate sector, we bring seasoned expertise to the table</p>
             </div>
           </div>
           <div className="box-container">
-            <img src={bestPrice} alt="Logo" className="logo" />
+            <img src={customer} alt="Logo" className="logo" />
             <div className="content">
-              <h3>User-Friendly Experience</h3>
+              <h3>Customer-Centric Approach</h3>
 
               <p className="text">
-              Enjoy a seamless and intuitive shopping experience with our easy-to-use website.
+              Our clients are our priority. We've built enduring relationships based on trust and transparency.</p>
+            </div>
+          </div>
+          <div className="box-container">
+            <img src={growth} alt="Logo" className="logo" />
+            <div className="content">
+              <h3>Proven Track Record</h3>
+
+              <p className="text">
+              We've helped nearly 1900 individuals achieve their dream of homeownership.
               </p>
             </div>
           </div>
           <div className="box-container">
-            <img src={bestPrice} alt="Logo" className="logo" />
+            <img src={cusservice} alt="Logo" className="logo" />
             <div className="content">
-              <h3>Quality Assurance</h3>
-
-              <p className="text">
-              Rest assured, our products meet the highest standards of quality and durability.
-              </p>
-            </div>
-          </div>
-          <div className="box-container">
-            <img src={bestPrice} alt="Logo" className="logo" />
-            <div className="content">
-              <h3>Outstanding Customer Support</h3>
+              <h3>Comprehensive Services</h3>
 
               <p className="text">
               Our friendly support team is always ready to assist you with any questions or concerns.

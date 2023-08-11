@@ -1,9 +1,7 @@
-/* General Styles */
 a {
   text-decoration: none;
 }
 
-/* Top Header */
 .top-header {
   background-color: #d51730;
   color: white;
@@ -12,7 +10,6 @@ a {
   align-items: center;
 }
 
-/* Box1 */
 .box1 {
   display: flex;
   justify-content: space-evenly;
@@ -41,10 +38,9 @@ a {
   border: 1px solid white;
 }
 
-/* Box2 */
 .box2 {
   padding: 0.5vmax;
-  color: white !important; /* Change the icon color to white */
+  color: white !important;
   margin: 0.5vmax;
   text-decoration: none;
 }
@@ -52,12 +48,11 @@ a {
 .box2 > a {
   margin: 1vmax;
   text-decoration: none;
-  color: white !important; /* Change the icon color to white */
+  color: white !important;
   margin: 1vmax;
   text-decoration: none;
 }
 
-/* Container Header */
 .container-header {
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -75,7 +70,6 @@ a {
   width: 10vmax;
 }
 
-/* Header Text */
 .container-header > .header-text > ul {
   display: flex;
   list-style: none;
@@ -92,31 +86,28 @@ a {
   margin: 0 2vmax;
 }
 
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-  /* Hide the top header */
   .top-header {
     display: none;
   }
   .container-header {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 
   .header-image,
   .header-text {
-    width: 100%; /* Take up full width */
-    text-align: center; /* Center-align the items */
-    margin: 10px 0; /* Add spacing between items */
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
   }
 
   .header-text ul {
-    flex-wrap: wrap; /* Allow list items to wrap */
+    flex-wrap: wrap;
     justify-content: center;
   }
 
   .header-item {
-    width: 40%; /* Each item takes half width to create 2 columns */
+    width: 40%;
     padding: 5px;
   }
 }

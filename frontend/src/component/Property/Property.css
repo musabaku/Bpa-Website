@@ -85,7 +85,6 @@
 
   }
 
-  /* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .paginationBox {
     margin: 4vmax;
@@ -110,7 +109,6 @@
   }
 }
 
-/* For screens with a maximum width of 576px */
 @media (max-width: 576px) {
   .paginationBox {
     margin: 3vmax;

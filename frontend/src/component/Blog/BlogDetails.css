@@ -6,7 +6,7 @@
   
   .blogMain-image-container img {
     max-width: 100%;
-    max-height: 350px; /* Set your desired maximum height here */
+    max-height: 350px; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  }
@@ -190,9 +190,7 @@ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
 
-  /* BlogDetails.css */
 
-/* For screens with a maximum width of 768px */
 @media (max-width: 768px) {
   .blogMain-details-container {
     padding: 10px;

@@ -7,7 +7,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 
 const BlogCard = () => {
   const dispatch = useDispatch();
-
+console.log("here111")
   useEffect(() => {
     dispatch(getBlog());
   }, [dispatch]);

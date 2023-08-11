@@ -1,35 +1,29 @@
-/* CreateBlog.css */
 
 .dashboard {
     display: flex;
-    /* Add any other styles for the dashboard container */
   }
   
   .create-blog-container {
     padding: 20px;
     margin: 20px;
     border: 1px solid #ccc;
-    /* Add any other styles for the create-blog container */
   }
   
   .create-blog-container h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    /* Add any other styles for the h2 element */
   }
   
 
   .create-blog-container label {
     display: block;
     margin-bottom: 5px;
-    /* Add any other styles for the labels */
   }
   
   .create-blog-container input {
     width: 100%;
     padding: 8px;
     margin-bottom: 15px;
-    /* Add any other styles for the input elements */
   }
   
   .create-blog-container .create-blog-button {
@@ -38,12 +32,10 @@
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    /* Add any other styles for the button */
   }
   
 
   .react-quill .ql-editor {
     min-height: 200px;
-    /* Add any styles for the editor content */
   }
   

@@ -6,6 +6,7 @@ import {login} from "../../../redux/actions/userAction";
 import {toast} from "react-toastify"
 import "react-toastify/dist/ReactToastify.css";
 import Loader from "../../Loader/Loader";
+import { clearErrors } from "../../../redux/actions/propertyAction";
 import { useNavigate } from 'react-router-dom'
 
 const AdminLogin = () => {
@@ -16,20 +17,20 @@ const AdminLogin = () => {
   const {loading,error,isAuthenticated}  = useSelector((state)=>state.user)
 
 
-  // const [loginEmail, setloginEmail] = useState("");
-  // const [loginPassword, setloginPassword] = useState("");
+  const [loginEmail, setloginEmail] = useState("");
+  const [loginPassword, setloginPassword] = useState("");
 
-  const defaultEmail = "musabadmin1@gmail.com"
-  const defaultPassword = "musabadmin1234"
+  // const defaultEmail = "admin1@gmail.com"
+  // const defaultPassword = "admin1234"
 
-  const [loginEmail, setloginEmail] = useState(defaultEmail);
-  const [loginPassword, setloginPassword] = useState(defaultPassword);
+  // const [loginEmail, setloginEmail] = useState(defaultEmail);
+  // const [loginPassword, setloginPassword] = useState(defaultPassword);
 
 
 useEffect(()=>{
 if(error){
   toast.error(error)
-  // dispatch(clearErrors())
+  dispatch(clearErrors())
 }
 if(isAuthenticated){
   navigate(`/`)
