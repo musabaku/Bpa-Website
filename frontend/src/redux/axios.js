@@ -3,8 +3,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:4000", 
-  // baseURL: "https://mkcommerce.onrender.com/api/v1", 
+  baseURL: "ttps://bigpropertyagency.onrender.com", 
 });
 
 export default instance;
