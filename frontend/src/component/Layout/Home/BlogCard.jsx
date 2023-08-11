@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getBlog } from "../../../redux/actions/blogAction";
 import BlogPage from "../../Blog/BlogPage";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const BlogCard = () => {
   const dispatch = useDispatch();
