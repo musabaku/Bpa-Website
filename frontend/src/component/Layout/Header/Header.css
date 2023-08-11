@@ -1,48 +1,19 @@
-.container-header {
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  overflow: hidden;
-
-}
-
-.container-header > .header-text > ul {
-  display: flex;
-  list-style: none;
-  font: 300 1.5vmax;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-decoration: none;
-  
-  color: #363636;
-  margin: 0;
-  padding: 0;
-}
-
+/* General Styles */
 a {
   text-decoration: none;
 }
-.container-header > .header-text > ul > .header-item {
-  padding: 0.5vmax;
-  margin: 0 2vmax;
-}
-.container-header > .header-image {
-  margin-left: 4vmax;
-}
-.container-header > .header-image > img {
-  width: 10vmax;
-}
-.top-header{
+
+/* Top Header */
+.top-header {
   background-color: #d51730;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
-.box1{
+/* Box1 */
+.box1 {
   display: flex;
   justify-content: space-evenly;
   font: 300 0.7vmax "Roboto";
@@ -50,33 +21,33 @@ a {
   margin-left: 2.5vmax;
   align-items: center;
 }
+
 .box1 > p {
   margin: 0 3vmax;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 13px;
 }
-.admin-log, .admin-db{
+
+.admin-log,
+.admin-db {
   margin: 0 3vmax;
   padding: 7px 15px;
-/*   
-  color: #fbda61;
-  background-color:#410954; */
   background-color: #d51730;
   color: white;
-cursor: pointer;
+  cursor: pointer;
   text-decoration: none;
   font-size: 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease;
   border: 1px solid white;
 }
-.box2{
+
+/* Box2 */
+.box2 {
   padding: 0.5vmax;
   color: white !important; /* Change the icon color to white */
   margin: 0.5vmax;
   text-decoration: none;
 }
-
 
 .box2 > a {
   margin: 1vmax;
@@ -86,4 +57,66 @@ cursor: pointer;
   text-decoration: none;
 }
 
+/* Container Header */
+.container-header {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+}
 
+.container-header > .header-image {
+  margin-left: 4vmax;
+}
+
+.container-header > .header-image > img {
+  width: 10vmax;
+}
+
+/* Header Text */
+.container-header > .header-text > ul {
+  display: flex;
+  list-style: none;
+  font: 300 1.5vmax;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: #363636;
+  margin: 0;
+  padding: 0;
+}
+
+.container-header > .header-text > ul > .header-item {
+  padding: 0.5vmax;
+  margin: 0 2vmax;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Hide the top header */
+  .top-header {
+    display: none;
+  }
+  .container-header {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .header-image,
+  .header-text {
+    width: 100%; /* Take up full width */
+    text-align: center; /* Center-align the items */
+    margin: 10px 0; /* Add spacing between items */
+  }
+
+  .header-text ul {
+    flex-wrap: wrap; /* Allow list items to wrap */
+    justify-content: center;
+  }
+
+  .header-item {
+    width: 40%; /* Each item takes half width to create 2 columns */
+    padding: 5px;
+  }
+}

@@ -36,7 +36,9 @@
     text-align: left;
     border-bottom: 1px solid rgba(0, 0, 0, 0.158);
   }
-  
+  .deletebttn{
+    margin-left: 1vmax;
+  }
   .propertyListTable a,
   .propertyListTable button {
     color: rgba(0, 0, 0, 0.527);

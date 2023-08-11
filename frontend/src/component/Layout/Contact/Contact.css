@@ -154,3 +154,50 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   font-size: 24px;
 }
 
+@media (max-width: 768px) {
+  .contacts {
+    padding: 20px 0;
+    height: auto;
+  }
+
+  .contacts.sm {
+    height: auto;
+  }
+
+  .contacts h2, .smh2 {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    max-width: 90%;
+    margin: 0 auto 20px;
+  }
+
+  .contacts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    font-size: 0.9rem;
+  }
+  
+  /* Adjust the padding and font size for the social media icons */
+  .sm-contact-icon {
+    padding: 6px;
+    font-size: 20px;
+  }
+
+  .sm-title {
+    font-size: 1.1rem;
+  }
+}

@@ -51,17 +51,27 @@ const Header = () => {
           <img src={logo} alt="Logo" />
         </div>
         <div className="header-text">
+            
           <ul>
             <li className="header-item"><Link to="/">Home</Link></li>
             <li className="header-item"><Link to="/about">About</Link></li>
-            <li className="header-item"><Link to="/services">Services</Link></li>
-            <li className="header-item"><Link to="/tc">Turkish Citizenship</Link></li>
+
+
             <li className="header-item"><Link to="/properties">Properties</Link></li>
+
+
             <li className="header-item"><Link to="/blog">Blog</Link></li>
+            <li className="header-item"><Link to="/services">Services</Link></li>
             <li className="header-item"><Link to="/contact-us">Contact Us</Link></li>
+            <li className="header-item"><Link to="/tc">Turkish Citizenship</Link></li>
+
           </ul>
+          
         </div>
       </div>
+     
+
+
     </div>
   );
 };

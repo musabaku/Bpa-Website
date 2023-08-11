@@ -58,3 +58,42 @@ margin-bottom: 3vmax;
   background-color: blue;
 
 }
+
+/* Existing CSS */
+
+/* For screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .image > img {
+    width: 100px; /* Reduce image size */
+    height: 100px;
+  }
+
+  .text-image {
+    padding: 2vmax 1vmax; /* Adjust padding for spacing */
+  }
+
+  .text-image > h2 {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    margin-bottom: 1.5vmax; /* Adjust margin for spacing */
+  }
+
+  .p-tc {
+    font-size: 1rem; /* Adjust font size for readability */
+    width: 80%; /* Increase width for better text wrapping */
+    margin-bottom: 1.5vmax; /* Adjust margin for spacing */
+  }
+
+  .btn-ptc {
+    width: 120px; /* Reduce button width */
+    height: 36px; /* Reduce button height */
+    margin-bottom: 2vmax;
+  }
+
+  .container {
+    height: auto; /* Auto adjust height */
+  }
+
+  .about-design {
+    display: none; /* Hide the decorative lines on smaller screens */
+  }
+}

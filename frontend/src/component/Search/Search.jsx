@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "./Search.css";
 import { getProperty } from "../../redux/actions/propertyAction";
 
-const Search = () => {
+const Search = ({resetSelectedLocation}) => {
   const dispatch = useDispatch();
 
   const [keyword, setKeyword] = useState("");
@@ -36,11 +36,29 @@ const Search = () => {
     setKeyword("");
     setSelectedRange("");
     setPrice([0, 500000]);
+    resetSelectedLocation()
     dispatch(getProperty()); 
   };
 
   return (
+    <div className="search-bar">
+
     <form onSubmit={handleSearch} className="search-form">
+    <span className="dropdown">
+   
+   <select
+     value={selectedRange}
+     onChange={(e) => handlePriceDropdownChange(e.target.value)}
+   >
+     <option value="">Price</option>
+     {priceRanges.map((range) => (
+       <option key={range.label} value={range.label}>
+         {range.label}
+       </option>
+     ))}
+   </select>
+ </span>
+
       <input
         type="text"
         placeholder="Search by name"
@@ -50,27 +68,15 @@ const Search = () => {
 
     
 
-      <span className="dropdown">
-   
-        <select
-          value={selectedRange}
-          onChange={(e) => handlePriceDropdownChange(e.target.value)}
-        >
-          <option value="">Price Range</option>
-          {priceRanges.map((range) => (
-            <option key={range.label} value={range.label}>
-              {range.label}
-            </option>
-          ))}
-        </select>
-      </span>
-
+      
       <button type="submit" className="searchButton-prop">Search</button>
 
       <button type="button" className="resetButton-prop" onClick={handleReset}>
         Reset
       </button>
     </form>
+    </div>
+
   );
 };
 

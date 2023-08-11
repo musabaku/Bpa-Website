@@ -6,13 +6,23 @@
   justify-content: space-between;
   color: white;
   align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.bpa-footer > .header-image {
-  margin-left: 4vmax;
-}
+
 .bpa-footer > .header-image > img {
   width: 7vmax;
 }
 .footer-text{
   margin-right: 15vmax;
+}
+@media (max-width: 768px) {
+  .bpa-footer {
+    flex-direction: column; /* Stack content in a column */
+    text-align: center; /* Center align text in mobile view */
+    height: auto; /* Let the content determine the height */
+  }
+
+  .footer-text {
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
 }

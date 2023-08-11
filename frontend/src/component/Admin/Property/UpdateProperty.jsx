@@ -128,7 +128,7 @@ const UpdateProperty = () => {
     const formData = {
       name,
       description,
-      image,
+      image: image,
       price,
       location,
       beds,
@@ -160,14 +160,6 @@ const UpdateProperty = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="description">Description:</label>
-              <ReactQuill
-                theme="snow"
-                value={description}
-                onChange={setDescription}
-              />
-            </div>
-            <div className="form-group">
               <label htmlFor="image">Image Link:</label>
               <input
                 type="text"
@@ -177,6 +169,15 @@ const UpdateProperty = () => {
                 required
               />
             </div>
+            <div className="form-group">
+              <label htmlFor="description">Description:</label>
+              <ReactQuill
+                theme="snow"
+                value={description}
+                onChange={setDescription}
+              />
+            </div>
+           
             {/* <div className="form-group">
               <label htmlFor="price">Price:</label>
               <input

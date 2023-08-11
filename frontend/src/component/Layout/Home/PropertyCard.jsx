@@ -49,8 +49,11 @@ const PropertyDetails = ({ property }) => {
                   </div>
 
                 </div>
+                
+               
             </div>
             </Link>
+          
     </Fragment>
   );
 };

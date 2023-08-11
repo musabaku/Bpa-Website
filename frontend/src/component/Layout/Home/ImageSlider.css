@@ -5,12 +5,19 @@
   width: 100%;
   max-width: 800px; /* Adjust this to set the slider width */
   margin: 0 auto;
+  height: 300px;
+z-index: 1;
 }
-
+.swiperStyle{
+  width: '100%';
+  height: '350px';
+  border-radius: '10px';
+  overflow: 'hidden';
+}
 /* Individual slide */
 .swiper-slide img {
   width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 /* Pagination styles (optional) */
@@ -58,4 +65,27 @@
 
 .swiper-button-next {
   right: 10px;
+}
+
+/* Existing CSS */
+
+/* For screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .slider-container {
+    max-width: 100%; /* Adjust slider width for smaller screens */
+  height: 300px;
+
+  }
+
+  .swiper-pagination {
+    bottom: 10px; /* Adjust pagination position */
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 30px; /* Adjust navigation button size */
+    height: 30px;
+    font-size: 20px; /* Adjust font size */
+    top: 45%; /* Adjust navigation button vertical position */
+  }
 }

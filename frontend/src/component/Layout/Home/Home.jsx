@@ -12,6 +12,8 @@ import { getProperty } from "../../../redux/actions/propertyAction";
 import PropertyCard from "./PropertyCard.jsx";
 import Loader from "../../Loader/Loader";
 import ImageSlider from "./ImageSlider";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const { properties, loading } = useSelector((state) => state.properties);
@@ -27,15 +29,31 @@ const Home = () => {
         <Loader />
       ) : (
         <Fragment>
-          <ImageSlider />
           <Search />
+          <ImageSlider />
+{/* 
+          <div class="about-design">
+          <div class="sider-line"></div>
+          <div class="middler-line"></div>
+          <div class="sider-line"></div>
+        </div> */}
+<div className="box-viewall">
 
           <h1 className="h1-popular">Popular Properties</h1>
+          <div className="propButton">
+          <Link to={"/properties"} >
+            <button>
+              View All  <RiArrowRightSLine />
+            </button>
+            </Link>
+          </div>
+</div>
           <div className="big-container">
             {properties &&
               properties.slice(0, 8).map((property) => (
                 <PropertyCard key={property._id} property={property} />
               ))}
+              
           </div>
 
             <CountStats />

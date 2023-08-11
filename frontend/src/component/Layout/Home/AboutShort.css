@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #E6E6E6;
   
-  padding-top: 6vmax;
+  padding-top: 3vmax;
 
   color: black;
 }
@@ -71,4 +71,34 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   margin: 1.5vmax 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+}
+
+/* Existing CSS */
+
+/* For screens smaller than 768px (typical mobile screens) */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 1rem; /* Adjust font size for readability */
+    width: 90%; /* Increase width for better text wrapping */
+  }
+
+  .box-container {
+    width: 90%; /* Increase width for better spacing */
+    height: auto; /* Auto adjust height */
+  }
+
+  .logo {
+    width: 50px; /* Reduce logo size */
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+
+  .box-container > .content > .text {
+    font-size: 1rem; /* Adjust font size for readability */
+  }
+
+  .box-container > .content > h3 {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    margin: 1rem 0; /* Adjust margin for spacing */
+  }
 }

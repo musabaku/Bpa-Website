@@ -10,25 +10,25 @@
     color: #333;
 
   }
-  
+/*   
   .propertySide {
     display: flex;
     align-items: center;
     width: 100%;
     height: 145px;
 
-  }
+  } */
   
-  .propertySide img {
+  /* .propertySide img {
     width: 120px;
     height:100px;
     margin-right: 10px;
     border-radius: 4px 0 0 4px;
    
-  }
+  } */
   
  
-  .propertySide-details h3 {
+  /* .propertySide-details h3 {
    font: 400 1.1vmax;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 5px;
@@ -36,19 +36,64 @@
     color:#61fba4 ;
 
     
-  }
+  } */
   
-  .propertySide-details span {
+  /* .propertySide-details span {
     font-size: 16px;
     color: #555;
     color:#fbf161 ;
 
   }
-  
-  .propertySide-details p {
+   */
+  /* .propertySide-details p {
     font-size: 16px;
     margin-top: 5px;
     color: #777;
+    color:#61fbf3 ;
+
+  } */
+  
+  /* .propertySide-details svg {
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+
+   */
+
+  
+  .propertySide {
+    display: flex;
+    flex-direction: column; /* Change to column for better responsiveness */
+    align-items: left;
+    width: 100%;
+    padding: 10px 0;
+
+  }
+  
+  .propertySide img {
+    width: 100%; /* Set width to 100% for responsiveness */
+    max-height: 150px; /* Add max-height to prevent images from stretching */
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .propertySide-details h3 {
+    font: 400 1rem;
+    margin-bottom: 5px;
+    color:#61fba4 ;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  }
+  
+  .propertySide-details span {
+    font-size: 0.9rem;
+    color:#fbf161 ;
+
+  }
+  
+  .propertySide-details p {
+    font-size: 0.9rem;
+    margin-top: 5px;
     color:#61fbf3 ;
 
   }
@@ -57,4 +102,3 @@
     margin-right: 5px;
     vertical-align: middle;
   }
-  

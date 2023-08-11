@@ -82,7 +82,7 @@ const PropertyList = () => {
                       <Link to={`/admin/property/${item._id}`}>
                         <FaEye />
                       </Link>
-                      <button onClick={() => deletePropertyHandler(item._id)}>
+                      <button className='deletebttn' onClick={() => deletePropertyHandler(item._id)}>
                         <FaTrash />
                       </button>
                     </td>

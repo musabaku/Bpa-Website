@@ -13,7 +13,9 @@ const Property = () => {
   const [selectedlocation, setSelectedlocation] = useState("");
   const { keyword } = useParams();
 
-
+  const resetSelectedLocation = () => {
+    setSelectedlocation(""); 
+  };
   
   const locations= [
     "Bagcilar",
@@ -30,7 +32,7 @@ const Property = () => {
   //   dispatch(getProperty(keyword, currentPage, selectedlocation));
   // }, [dispatch,keyword, currentPage, selectedlocation]);
   useEffect(() => {
-    dispatch(getProperty(keyword,currentPage, [0, 500000],selectedlocation));
+    dispatch(getProperty(keyword, [0, 500000],currentPage,selectedlocation));
   }, [dispatch,keyword,currentPage,selectedlocation]);
 
 
@@ -46,7 +48,7 @@ const Property = () => {
 
   return (
     <div>
-        <Search />
+        <Search resetSelectedLocation={resetSelectedLocation} />
      
 
       <div className="locationBox">

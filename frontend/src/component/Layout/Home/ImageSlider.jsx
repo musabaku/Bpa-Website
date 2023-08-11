@@ -17,12 +17,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 const ImageSlider = () => {
   const images = [slid1, slid2, slid3];
 
-  const swiperStyle = {
-    width: '100%',
-    height: '400px', // Set the desired height of the slider
-    borderRadius: '10px',
-    overflow: 'hidden',
-  };
+ 
 
   const slideImageStyle = {
     width: '100%',
@@ -31,14 +26,14 @@ const ImageSlider = () => {
   };
 
   return (
-    <div style={swiperStyle}>
+    <div className="swiperStyle">
       <Swiper
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
-        autoplay={{ delay: 1500, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>

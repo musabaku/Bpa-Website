@@ -5,7 +5,7 @@ import tcpic from "../../../images/TC/tcpic.JPG";
 const TC = () => {
   return(
 <div className="tc">
-<img src={tcpic} alt="About" className="about-image" />
+<img src={tcpic} alt="About" className="aboutTc-image" />
 
 <h1>Turkish Citizenship: A Guide to Obtaining It by Real Estate and Investment</h1>
 

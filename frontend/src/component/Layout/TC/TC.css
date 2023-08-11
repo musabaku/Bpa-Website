@@ -13,7 +13,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 text-align: center;
 }
-
+.aboutTc-image{
+height: 70vh;
+width: 100%;
+}
 .tc h2 {
   font-size: 22px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -41,4 +44,14 @@ text-align: center;
 
 .tc-link:hover {
   background-color: #0062cc;
+}
+
+/* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .aboutTc-image {
+    width: 100%;
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    height: 40vh;
+  }
 }

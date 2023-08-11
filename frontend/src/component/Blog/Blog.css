@@ -39,7 +39,7 @@
   width: 25%;
   /* background-color: #fbcd61; */
   background-color: #410954;
-  height: 800px;
+  height: 1300px;
   padding: 10px;
 }
 .recent-properties h2 {
@@ -47,4 +47,23 @@
   border-bottom: 2px solid rgba(243, 255, 71, 0.941);
   padding-bottom: 1.5vmax;
   color: #fbda61;
+}
+
+/* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .blogmain-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blogmain-container {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .recent-properties {
+    width: 90%;
+    height: auto;
+    padding: 20px 10px;
+  }
 }

@@ -31,8 +31,11 @@
   .page-link {
     text-decoration: none;
     transition: all 0.3s;
+
     font: 300 0.7vmax "Roboto";
     color: rgb(80, 80, 80);
+    color: #410954;
+    
   }
   
   .page-item:first-child {
@@ -48,7 +51,7 @@
   }
   
   .pageItemActive {
-    background-color: tomato;
+    background-color:#fbda61;
   }
 
 
@@ -56,7 +59,7 @@
   .locationBox {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin: 15px 0;
   }
   
   .location-link {
@@ -81,3 +84,52 @@
     background-color:#fbda61;
 
   }
+
+  /* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .paginationBox {
+    margin: 4vmax;
+  }
+
+  .locationBox {
+    margin: 10px 0;
+  }
+
+  .location-link {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  .page-item {
+    padding: 0.8vmax 1.2vmax;
+    font-size: 12px;
+  }
+
+  .page-link {
+    font-size: 12px;
+  }
+}
+
+/* For screens with a maximum width of 576px */
+@media (max-width: 576px) {
+  .paginationBox {
+    margin: 3vmax;
+  }
+
+  .location-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .page-item {
+    padding: 0.6vmax 1vmax;
+    font-size: 10px;
+  }
+
+  .page-link {
+    font-size: 10px;
+  }
+  .locationBox{
+    flex-wrap: wrap;
+  }
+}

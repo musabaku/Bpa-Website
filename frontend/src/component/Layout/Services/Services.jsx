@@ -67,16 +67,16 @@ const Services = () => {
       </div>
       <div className="guide-container">
             <Link className="buy-property-h1" to="/services/buyProperty">
-              <h3><RiCheckboxCircleFill style={{ marginRight: '10px' , color : 'green' }}/>Buying Property in Turkey: Legal Procedures</h3>
+              <h3><RiCheckboxCircleFill className='iconsvvg' style={{ marginRight: '10px' , color : 'green' }}/>Buying Property in Turkey: Legal Procedures</h3>
             </Link>
             <Link className="buy-property-h1" to="/services/propertyManagement">
-              <h3><RiCheckboxCircleFill style={{ marginRight: '10px' , color : 'green' }}/>Streamlined Property Management in Turkey: An Overview</h3>
+              <h3><RiCheckboxCircleFill  className='iconsvvg' style={{ marginRight: '10px' , color : 'green' }}/>Streamlined Property Management in Turkey: An Overview</h3>
             </Link>
             <Link className="buy-property-h1" to="/services/resale">
-              <h3><RiCheckboxCircleFill style={{ marginRight: '10px' , color : 'green' }}/>Premium Resale Properties in Turkey: Your Ideal Investment</h3>
+              <h3><RiCheckboxCircleFill className='iconsvvg'  style={{ marginRight: '10px' , color : 'green' }}/>Premium Resale Properties in Turkey: Your Ideal Investment</h3>
             </Link>
             <Link className="buy-property-h1" to="/services/primeProperties">
-              <h3><RiCheckboxCircleFill style={{ marginRight: '10px' , color : 'green' }}/>Discover Prime Properties in Turkey: Best Prices Guaranteed</h3>
+              <h3><RiCheckboxCircleFill  className='iconsvvg' style={{ marginRight: '10px' , color : 'green' }}/>Discover Prime Properties in Turkey: Best Prices Guaranteed</h3>
             </Link>
        
       </div>

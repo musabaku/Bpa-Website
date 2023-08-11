@@ -2,7 +2,7 @@
 
 import axios from "axios";
 export const getProperty =
-  (keyword = "", currentPage = 1,price = [0, 500000],location) =>
+  (keyword = "", price = [0, 500000],currentPage = 1,location) =>
   async (dispatch) => {
     try {
       dispatch({ type: "propertyRequest" });
@@ -18,6 +18,7 @@ export const getProperty =
       dispatch({ type: "propertyFail", payload: error.response.data.message });
     }
   };
+
 
 export const getAdminProperty = () => async (dispatch) => {
   try {
@@ -96,7 +97,7 @@ export const updateProperty = (id, propertyData) => async (dispatch) => {
     const config = {
       headers: { "Content-Type": "application/json" },
     };
-
+console.log(propertyData)
     const { data } = await axios.put(
       `/api/v1/admin/property/${id}`,
       propertyData,

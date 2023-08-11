@@ -99,6 +99,14 @@
       transform: translateY(10px);
     }
   }
+@keyframes leftRightAnimation {
+    0% {
+      transform: translateX(-8px);
+    }
+    100% {
+      transform: translateX(8px);
+    }
+  }
 
   .propertyMain-features {
     display: flex;
@@ -181,3 +189,79 @@
 
   }
   
+
+  /* PropertyDetails.css */
+
+/* For screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .propertyMain-details-container {
+    padding: 10px;
+  }
+
+  .propertyMain-image-features-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .propertyMain-image-container img {
+    max-height: 300px; /* Adjust the max-height to your preference */
+    width: 100%;
+  }
+
+  .propertyMain-features {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+  }
+
+  .propertyMain-features h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .propertyMain-features span {
+    font-size: 16px;
+  }
+
+  .propertyMain-features svg {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .propertyMain-features-details {
+    align-items: flex-start;
+  }
+
+  .propertyMain-feature span:first-child {
+    font-size: 18px;
+  }
+
+  .propertyMain-feature svg {
+    font-size: 20px;
+    margin-bottom: 3px;
+  }
+
+  .featuree {
+    width: 180px;
+    max-height: 200px; /* Adjust the max-height to your preference */
+    position: absolute;
+    top: 62vmax;
+    right: 1.5vmax;
+    width: 150px;
+    max-height: 80px; /* Set your desired maximum height here */
+    height: auto;
+    border-radius: 10px;
+  animation: leftRightAnimation 1s ease-in-out infinite alternate;
+
+  }
+
+  .propertyMain-description {
+    padding: 1vmax;
+  }
+
+  .propertyMain-description-text h2 {
+    font-size: 20px;
+  }
+}
