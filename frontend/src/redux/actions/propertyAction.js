@@ -8,10 +8,14 @@ export const getProperty =
     try {
       dispatch({ type: "propertyRequest" });
       // const { data } = await axios.get("/property");
-      let link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+      let link = `/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
       if (location) {
-        link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
+        link = `/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
       }
+      // let link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}`;
+      // if (location) {
+      //   link = `/api/v1/property?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&location=${location}`;
+      // }
       // const { data } = await axios.get(link);
       const { data } = await axiosInstance.get(link);
 

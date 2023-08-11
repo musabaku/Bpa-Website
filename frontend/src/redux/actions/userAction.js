@@ -6,7 +6,7 @@ export const login = (loginEmail, loginPassword) => async (dispatch) => {
     dispatch({ type: "userRequest" });
     const config = { headers: { "Content-type": "application/json" } };
 
-    const { data } = await axiosInstance.post("/api/v1/login", {
+    const { data } = await axiosInstance.post("/login", {
       email: loginEmail,
       password: loginPassword,
     },config);

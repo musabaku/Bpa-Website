@@ -6,9 +6,7 @@ const property = require("./routes/propertyRoute.js")
 const admin = require("./routes/adminRoute.js")
 const errorMiddleware = require("./middlewares/error.js") 
 const path = require("path");
-if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({ path: "Backend/config/.env" });
-  }
+
   app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');

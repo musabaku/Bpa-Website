@@ -4,7 +4,7 @@ import axiosInstance from "../axios";
 export const getBlog = ()=> async (dispatch) => {
   try {
     dispatch({ type: "blogRequest" });
-    const { data } = await axiosInstance.get("/api/v1/blog");
+    const { data } = await axiosInstance.get("/blog");
     // console.log(data)
     dispatch({ type: "blogSuccess", payload: data });
   } catch (error) {
@@ -14,7 +14,7 @@ export const getBlog = ()=> async (dispatch) => {
 export const getAdminBlog = () => async (dispatch) => {
   try {
     dispatch({ type: "AdminBlogRequest" });
-    const { data } = await axiosInstance.get("/api/v1/admin/blog");
+    const { data } = await axiosInstance.get("/admin/blog");
     dispatch({ type: "AdminBlogSuccess", payload: data });
   } catch (error) {
     dispatch({
@@ -62,7 +62,7 @@ export const updateBlog = (id, BlogData) => async (dispatch) => {
     };
 
     const { data } = await axiosInstance.put(
-      `/api/v1/admin/blog/${id}`,
+      `/admin/blog/${id}`,
       BlogData,
       config
     );
@@ -84,7 +84,7 @@ export const deleteBlog = (id) => async (dispatch) => {
   try {
     dispatch({ type: "deleteBlogRequest" });
 
-    const { data } = await axiosInstance.delete(`/api/v1/admin/blog/${id}`);
+    const { data } = await axiosInstance.delete(`/admin/blog/${id}`);
 
     dispatch({
       type: "deleteBlogSuccess",
@@ -101,7 +101,7 @@ export const deleteBlog = (id) => async (dispatch) => {
 export const getBlogDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: "blogDetailsRequest" });
-    const { data } = await axiosInstance.get(`/api/v1/blog/${id}`);
+    const { data } = await axiosInstance.get(`/blog/${id}`);
     // console.log(data);
     dispatch({ type: "blogDetailsSuccess", payload: data.blog });
   } catch (error) {
