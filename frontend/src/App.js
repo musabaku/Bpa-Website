@@ -31,41 +31,40 @@ import UpdateProperty from "./component/Admin/Property/UpdateProperty";
 import CreateBlog from "./component/Admin/Blog/CreateBlog";
 import BlogList from "./component/Admin/Blog/BlogList";
 import UpdateBlog from "./component/Admin/Blog/UpdateBlog";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 import AdminLogin from "./component/Layout/Header/AdminLogin";
 import React , {useEffect} from "react";
 
 export default function App() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const currentPath = window.location.pathname;
 
     if (currentPath === '/about') {
-      history.push('/about');
+      navigate('/about');
     } else if (currentPath === '/services') {
-      history.push('/services');
+      navigate('/services');
     } else if (currentPath === '/contact-us') {
-      history.push('/contact-us');
+      navigate('/contact-us');
     } else if (currentPath === '/') {
-      history.push('/');
+      navigate('/');
     } else if (currentPath === '/home') {
-      history.push('/');
+      navigate('/');
     } else if (currentPath === '/properties') {
-      history.push('/properties');
+      navigate('/properties');
     } else if (currentPath === '/blog') {
-      history.push('/blog');
+      navigate('/blog');
     } else if (currentPath === '/tc') {
-      history.push('/tc');
+      navigate('/tc');
     } else if (currentPath === '/property/:id') {
-      history.push('/property/:id');
+      navigate('/property/:id');
     } else if (currentPath === '/blog/:id') {
-      history.push('/blog/:id');
+      navigate('/blog/:id');
     }
-  }, [history]);
-
+  }, [navigate]);
   return (
     <Router>
       <Header />
