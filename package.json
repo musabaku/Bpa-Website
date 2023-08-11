@@ -7,6 +7,9 @@
     "start": "node backend/server.js",
     "dev": "nodemon backend/server.js"
   },
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
