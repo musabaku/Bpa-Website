@@ -3,7 +3,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://bigpropertyagency.onrender.com", 
+  baseURL: "https://bigpropertyagency.onrender.com/api/v1", 
 });
 
 export default instance;
