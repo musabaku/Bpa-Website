@@ -16,3 +16,13 @@ export const login = (loginEmail, loginPassword) => async (dispatch) => {
     dispatch({ type: "userFail", payload: error.response.data.message });
   }
 };
+export const logout = () => async (dispatch) => {
+  try {
+
+     await axiosInstance.get("/logout");
+
+    dispatch({ type: "logoutSuccess" });
+  } catch (error) {
+    dispatch({ type: "logoutFail", payload: error.response.data.message });
+  }
+};

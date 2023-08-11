@@ -10,11 +10,11 @@ import Footer from "./component/Layout/Footer/Footer";
 import TC from "./component/Layout/TC/TC";
 import Contact from "./component/Layout/Contact/Contact";
 import Blog from "./component/Blog/Blog";
-
 import BuyProperty from "./component/Layout/Services/BuyProperty";
 import PropertyManagement from "./component/Layout/Services/PropertyManagement";
 import Resale from "./component/Layout/Services/Resale";
 import PrimeProperties from "./component/Layout/Services/PrimeProperties";
+import NotFound from "./component/Layout/NotFound/NotFound";
 
 import Services from "./component/Layout/Services/Services";
 import About from "./component/About/About";
@@ -34,8 +34,47 @@ import UpdateBlog from "./component/Admin/Blog/UpdateBlog";
 
 
 import AdminLogin from "./component/Layout/Header/AdminLogin";
+import React , {useEffect} from "react";
 
 export default function App() {
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === '/about') {
+      window.location.pathname = '/about'; // Redirect internally
+    } else if (currentPath === '/services') {
+      window.location.pathname = '/services'; // Redirect internally
+    }
+     else if (currentPath === '/contact-us') {
+      window.location.pathname = '/contact-us'; // Redirect internally
+    }
+     else if (currentPath === '/') {
+      window.location.pathname = '/'; // Redirect internally
+    }
+     else if (currentPath === '/home') {
+      window.location.pathname = '/'; // Redirect internally
+    
+    } else if (currentPath === '/properties') {
+      window.location.pathname = '/properties';
+  }
+     else if (currentPath === '/blog') {
+      window.location.pathname = '/blog';
+  }
+     else if (currentPath === '/tc') {
+      window.location.pathname = '/tc';
+  }
+     else if (currentPath === '/properties') {
+      window.location.pathname = '/properties';
+  }
+     else if (currentPath === '/property/:id') {
+      window.location.pathname = '/property/:id';
+  }
+     else if (currentPath === '/blog/:id') {
+      window.location.pathname = '/blog/:id';
+  }
+  
+}, []);
+
   return (
     <Router>
       <Header />
@@ -70,6 +109,7 @@ export default function App() {
         <Route path="/admin/blog/:id" element={<UpdateBlog />} />
 
         <Route path="/login" element={<AdminLogin />} />
+        <Route path='*' element={<NotFound />} />
 
       </Routes>
       <ToastContainer /> 

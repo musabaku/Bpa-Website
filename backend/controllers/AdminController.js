@@ -29,3 +29,19 @@ exports.adminLogin = catchAsyncErrors(async (req, res, next) => {
     return next(new ErrorHandler("Something went wrong during login", 500));
   }
 });
+
+exports.logout = catchAsyncErrors(async (req, res, next) => {
+  try {
+    res.cookie("token", null, {
+      expires: new Date(Date.now()),
+      httpOnly: true,
+    });
+
+    res.status(200).json({
+      success: true,
+      message: "Logged Out",
+    });
+  } catch (error) {
+    return next(new ErrorHandler("Error during logout", 500));
+  }
+});

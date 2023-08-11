@@ -8,9 +8,21 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector ,useDispatch} from "react-redux";
+import {logout} from "../../../redux/actions/userAction"
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function logoutUser() {
+    dispatch(logout());
+    toast.success("Logout Successfully");
+    navigate("/");
+  }
   const {isAuthenticated} = useSelector((state) => state.user);
 
   return (
@@ -26,7 +38,11 @@ const Header = () => {
           {isAuthenticated && (
         <Link to="/admin/dashboard">
           <button className="admin-db">Admin-Dashboard</button>
-        </Link>
+        </Link>)}
+        
+        {isAuthenticated &&(
+         <button className="admin-log" onClick={logoutUser}>Logout</button>
+
       )}
         </div>
 

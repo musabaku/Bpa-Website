@@ -22,9 +22,12 @@ console.log("here111")
             blogs.slice(0, 6).map((blog) => <BlogPage blog={blog} key={blog._id} />)}
         </div>
         <div className="blogButton">
+        <Link to={"/blog"} >
             <button>
-              View All <RiArrowRightSLine />
+              View All  <RiArrowRightSLine />
             </button>
+            </Link>
+       
           </div>
       </div>
     </>
