@@ -31,40 +31,13 @@ import UpdateProperty from "./component/Admin/Property/UpdateProperty";
 import CreateBlog from "./component/Admin/Blog/CreateBlog";
 import BlogList from "./component/Admin/Blog/BlogList";
 import UpdateBlog from "./component/Admin/Blog/UpdateBlog";
-import { useNavigate } from 'react-router-dom';
 
 
 import AdminLogin from "./component/Layout/Header/AdminLogin";
-import React , {useEffect} from "react";
+import React   from "react";
 
 export default function App() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const currentPath = window.location.pathname;
-
-    if (currentPath === '/about') {
-      navigate('/about');
-    } else if (currentPath === '/services') {
-      navigate('/services');
-    } else if (currentPath === '/contact-us') {
-      navigate('/contact-us');
-    } else if (currentPath === '/') {
-      navigate('/');
-    } else if (currentPath === '/home') {
-      navigate('/');
-    } else if (currentPath === '/properties') {
-      navigate('/properties');
-    } else if (currentPath === '/blog') {
-      navigate('/blog');
-    } else if (currentPath === '/tc') {
-      navigate('/tc');
-    } else if (currentPath === '/property/:id') {
-      navigate('/property/:id');
-    } else if (currentPath === '/blog/:id') {
-      navigate('/blog/:id');
-    }
-  }, [navigate]);
+ 
   return (
     <Router>
       <Header />
